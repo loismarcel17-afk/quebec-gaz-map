@@ -1,0 +1,4339 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_a255a69abd952dfb2f4e22fa30be35f4 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-locatecontrol/0.66.2/L.Control.Locate.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-locatecontrol/0.66.2/L.Control.Locate.min.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_a255a69abd952dfb2f4e22fa30be35f4" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_a255a69abd952dfb2f4e22fa30be35f4 = L.map(
+                "map_a255a69abd952dfb2f4e22fa30be35f4",
+                {
+                    center: [45.4951836, -74.137233],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_51b908d5ba8c70336aee924ddae9f9e1 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_51b908d5ba8c70336aee924ddae9f9e1.addTo(map_a255a69abd952dfb2f4e22fa30be35f4);
+        
+    
+            var locate_control_06aa56492837a3094bae8d9dfb9bcaf2 = L.control.locate(
+                {"position": "topleft"}
+            ).addTo(map_a255a69abd952dfb2f4e22fa30be35f4);
+            
+        
+    
+            var marker_d495c6697478a5fbd51f3bf8a2f55552 = L.marker(
+                [45.4951836, -74.137233],
+                {
+}
+            ).addTo(map_a255a69abd952dfb2f4e22fa30be35f4);
+        
+    
+            var div_icon_ea6e6852677221e6c0415448ddbee6b1 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; color: white; background-color: #50D42F; padding: 3px 6px; border-radius: 3px; white-space: nowrap;\"\u003e\u003cb\u003eLittle Tree Gas\u26fd\ufe0f\u003c/b\u003e\u003cbr\u003e147.9$\u003c/div\u003e",
+  "iconSize": [120, 40],
+  "iconAnchor": [50, -10],
+  "className": "empty",
+});
+        
+    
+        var popup_d9418f10bd926185bc4909dbd1fc51bc = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_479e9592e3a0ae41fc41565a017c8876 = $(`<div id="html_479e9592e3a0ae41fc41565a017c8876" style="width: 100.0%; height: 100.0%;"><b>Little Tree Gas</b><br>Price: 147.9$<br>Location: 1401 Rang Ste Philomène Oka<br>Latitude: 45.4951836<br>Longitude: -74.137233</div>`)[0];
+                popup_d9418f10bd926185bc4909dbd1fc51bc.setContent(html_479e9592e3a0ae41fc41565a017c8876);
+            
+        
+
+        marker_d495c6697478a5fbd51f3bf8a2f55552.bindPopup(popup_d9418f10bd926185bc4909dbd1fc51bc)
+        ;
+
+        
+    
+    
+            marker_d495c6697478a5fbd51f3bf8a2f55552.bindTooltip(
+                `<div>
+                     Little Tree Gas - 147.9$
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d495c6697478a5fbd51f3bf8a2f55552.setIcon(div_icon_ea6e6852677221e6c0415448ddbee6b1);
+            
+    
+            var marker_33945d96aebe6924aae8c322115027ee = L.marker(
+                [45.6254689, -74.5920342],
+                {
+}
+            ).addTo(map_a255a69abd952dfb2f4e22fa30be35f4);
+        
+    
+            var div_icon_66d9599b2ae3c02634d55d83056a5b11 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; color: white; background-color: #50D42F; padding: 3px 6px; border-radius: 3px; white-space: nowrap;\"\u003e\u003cb\u003eEsso\u26fd\ufe0f\u003c/b\u003e\u003cbr\u003e148.9$\u003c/div\u003e",
+  "iconSize": [120, 40],
+  "iconAnchor": [50, -10],
+  "className": "empty",
+});
+        
+    
+        var popup_8570006672aba304f979d86dd69c4ea3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f06ac70644ed92be1d3b288ccb85e5dd = $(`<div id="html_f06ac70644ed92be1d3b288ccb85e5dd" style="width: 100.0%; height: 100.0%;"><b>Esso</b><br>Price: 148.9$<br>Location: 54 Rue Maple Grenville<br>Latitude: 45.6254689<br>Longitude: -74.5920342</div>`)[0];
+                popup_8570006672aba304f979d86dd69c4ea3.setContent(html_f06ac70644ed92be1d3b288ccb85e5dd);
+            
+        
+
+        marker_33945d96aebe6924aae8c322115027ee.bindPopup(popup_8570006672aba304f979d86dd69c4ea3)
+        ;
+
+        
+    
+    
+            marker_33945d96aebe6924aae8c322115027ee.bindTooltip(
+                `<div>
+                     Esso - 148.9$
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_33945d96aebe6924aae8c322115027ee.setIcon(div_icon_66d9599b2ae3c02634d55d83056a5b11);
+            
+    
+            var marker_d02e1fe365f0835b85551336bbb1b5eb = L.marker(
+                [46.1341203, -74.6142843],
+                {
+}
+            ).addTo(map_a255a69abd952dfb2f4e22fa30be35f4);
+        
+    
+            var div_icon_d79a6e67b77b032764169f867ada69f5 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; color: white; background-color: #50D42F; padding: 3px 6px; border-radius: 3px; white-space: nowrap;\"\u003e\u003cb\u003ePetro-Canada\u26fd\ufe0f\u003c/b\u003e\u003cbr\u003e154.7$\u003c/div\u003e",
+  "iconSize": [120, 40],
+  "iconAnchor": [50, -10],
+  "className": "empty",
+});
+        
+    
+        var popup_a8445702981c5f96bd1b2d23762fadfe = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fed1f08a7e0cf1577eb7a8e715b9e033 = $(`<div id="html_fed1f08a7e0cf1577eb7a8e715b9e033" style="width: 100.0%; height: 100.0%;"><b>Petro-Canada</b><br>Price: 154.7$<br>Location: 111 Montée Ryan Mont-Tremblant<br>Latitude: 46.1341203<br>Longitude: -74.6142843</div>`)[0];
+                popup_a8445702981c5f96bd1b2d23762fadfe.setContent(html_fed1f08a7e0cf1577eb7a8e715b9e033);
+            
+        
+
+        marker_d02e1fe365f0835b85551336bbb1b5eb.bindPopup(popup_a8445702981c5f96bd1b2d23762fadfe)
+        ;
+
+        
+    
+    
+            marker_d02e1fe365f0835b85551336bbb1b5eb.bindTooltip(
+                `<div>
+                     Petro-Canada - 154.7$
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d02e1fe365f0835b85551336bbb1b5eb.setIcon(div_icon_d79a6e67b77b032764169f867ada69f5);
+            
+    
+            var marker_01945c84200ed545af4084167e389aec = L.marker(
+                [46.1322132, -74.6141598],
+                {
+}
+            ).addTo(map_a255a69abd952dfb2f4e22fa30be35f4);
+        
+    
+            var div_icon_eec5decf6b981cef4772ccf58a8ae80d = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; color: white; background-color: #50D42F; padding: 3px 6px; border-radius: 3px; white-space: nowrap;\"\u003e\u003cb\u003eEsso\u26fd\ufe0f\u003c/b\u003e\u003cbr\u003e154.9$\u003c/div\u003e",
+  "iconSize": [120, 40],
+  "iconAnchor": [50, -10],
+  "className": "empty",
+});
+        
+    
+        var popup_1f0c8e33a0b784729fb5a397438b7a87 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_61f9951fae6cdf2d8c6d15226b29403b = $(`<div id="html_61f9951fae6cdf2d8c6d15226b29403b" style="width: 100.0%; height: 100.0%;"><b>Esso</b><br>Price: 154.9$<br>Location: 1757 Route 117 Mont-Tremblant<br>Latitude: 46.1322132<br>Longitude: -74.6141598</div>`)[0];
+                popup_1f0c8e33a0b784729fb5a397438b7a87.setContent(html_61f9951fae6cdf2d8c6d15226b29403b);
+            
+        
+
+        marker_01945c84200ed545af4084167e389aec.bindPopup(popup_1f0c8e33a0b784729fb5a397438b7a87)
+        ;
+
+        
+    
+    
+            marker_01945c84200ed545af4084167e389aec.bindTooltip(
+                `<div>
+                     Esso - 154.9$
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_01945c84200ed545af4084167e389aec.setIcon(div_icon_eec5decf6b981cef4772ccf58a8ae80d);
+            
+    
+            var marker_cebafe0588e515baac4cf42b07b88a4b = L.marker(
+                [45.7307627, -74.6730391],
+                {
+}
+            ).addTo(map_a255a69abd952dfb2f4e22fa30be35f4);
+        
+    
+            var div_icon_06e5275495ef0bda20807907560a4157 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; color: white; background-color: #50D42F; padding: 3px 6px; border-radius: 3px; white-space: nowrap;\"\u003e\u003cb\u003ePetro-Canada\u26fd\ufe0f\u003c/b\u003e\u003cbr\u003e158.9$\u003c/div\u003e",
+  "iconSize": [120, 40],
+  "iconAnchor": [50, -10],
+  "className": "empty",
+});
+        
+    
+        var popup_de49b8fb08004ba1a14134ac7d7cc46e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_50d320fcd8f2746c3eb26af33a6f95ff = $(`<div id="html_50d320fcd8f2746c3eb26af33a6f95ff" style="width: 100.0%; height: 100.0%;"><b>Petro-Canada</b><br>Price: 158.9$<br>Location: 40 Maple Grenville-sur-la-Rouge<br>Latitude: 45.7307627<br>Longitude: -74.6730391</div>`)[0];
+                popup_de49b8fb08004ba1a14134ac7d7cc46e.setContent(html_50d320fcd8f2746c3eb26af33a6f95ff);
+            
+        
+
+        marker_cebafe0588e515baac4cf42b07b88a4b.bindPopup(popup_de49b8fb08004ba1a14134ac7d7cc46e)
+        ;
+
+        
+    
+    
+            marker_cebafe0588e515baac4cf42b07b88a4b.bindTooltip(
+                `<div>
+                     Petro-Canada - 158.9$
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_cebafe0588e515baac4cf42b07b88a4b.setIcon(div_icon_06e5275495ef0bda20807907560a4157);
+            
+    
+            var marker_b1b1e73418000e79e68b3bab01493eb8 = L.marker(
+                [45.8896615, -74.1474415],
+                {
+}
+            ).addTo(map_a255a69abd952dfb2f4e22fa30be35f4);
+        
+    
+            var div_icon_7ebf37efddc46e30dff581f3868a8a4d = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; color: white; background-color: #50D42F; padding: 3px 6px; border-radius: 3px; white-space: nowrap;\"\u003e\u003cb\u003eUltramar\u26fd\ufe0f\u003c/b\u003e\u003cbr\u003e158.9$\u003c/div\u003e",
+  "iconSize": [120, 40],
+  "iconAnchor": [50, -10],
+  "className": "empty",
+});
+        
+    
+        var popup_9a2f4a233e46a9b1614a6c9ad462b923 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4ccb55b2a725873b80144baa3c7fe213 = $(`<div id="html_4ccb55b2a725873b80144baa3c7fe213" style="width: 100.0%; height: 100.0%;"><b>Ultramar</b><br>Price: 158.9$<br>Location: 720 Chemin Jean-Adam Piedmont<br>Latitude: 45.8896615<br>Longitude: -74.1474415</div>`)[0];
+                popup_9a2f4a233e46a9b1614a6c9ad462b923.setContent(html_4ccb55b2a725873b80144baa3c7fe213);
+            
+        
+
+        marker_b1b1e73418000e79e68b3bab01493eb8.bindPopup(popup_9a2f4a233e46a9b1614a6c9ad462b923)
+        ;
+
+        
+    
+    
+            marker_b1b1e73418000e79e68b3bab01493eb8.bindTooltip(
+                `<div>
+                     Ultramar - 158.9$
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b1b1e73418000e79e68b3bab01493eb8.setIcon(div_icon_7ebf37efddc46e30dff581f3868a8a4d);
+            
+    
+            var marker_24bf42b0f15aaa68fd32c001b1e12b8e = L.marker(
+                [45.8906134, -74.1490781],
+                {
+}
+            ).addTo(map_a255a69abd952dfb2f4e22fa30be35f4);
+        
+    
+            var div_icon_fb9e64976b78331d5f2aaa75b278ce36 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; color: white; background-color: #50D42F; padding: 3px 6px; border-radius: 3px; white-space: nowrap;\"\u003e\u003cb\u003eEsso\u26fd\ufe0f\u003c/b\u003e\u003cbr\u003e158.9$\u003c/div\u003e",
+  "iconSize": [120, 40],
+  "iconAnchor": [50, -10],
+  "className": "empty",
+});
+        
+    
+        var popup_9c32fabf73539befa3e1136e9df5b2b9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9f3235ddc78e60f2bda9625cbd91fdde = $(`<div id="html_9f3235ddc78e60f2bda9625cbd91fdde" style="width: 100.0%; height: 100.0%;"><b>Esso</b><br>Price: 158.9$<br>Location: 201 Avenue de la Gare Saint-Sauveur<br>Latitude: 45.8906134<br>Longitude: -74.1490781</div>`)[0];
+                popup_9c32fabf73539befa3e1136e9df5b2b9.setContent(html_9f3235ddc78e60f2bda9625cbd91fdde);
+            
+        
+
+        marker_24bf42b0f15aaa68fd32c001b1e12b8e.bindPopup(popup_9c32fabf73539befa3e1136e9df5b2b9)
+        ;
+
+        
+    
+    
+            marker_24bf42b0f15aaa68fd32c001b1e12b8e.bindTooltip(
+                `<div>
+                     Esso - 158.9$
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_24bf42b0f15aaa68fd32c001b1e12b8e.setIcon(div_icon_fb9e64976b78331d5f2aaa75b278ce36);
+            
+    
+            var marker_44c0860583579f18960181e738acf302 = L.marker(
+                [45.56873239999999, -73.92436169999999],
+                {
+}
+            ).addTo(map_a255a69abd952dfb2f4e22fa30be35f4);
+        
+    
+            var div_icon_a57442ed97861d971ada739a64d20188 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; color: white; background-color: #50D42F; padding: 3px 6px; border-radius: 3px; white-space: nowrap;\"\u003e\u003cb\u003eCouche-Tard\u26fd\ufe0f\u003c/b\u003e\u003cbr\u003e159.9$\u003c/div\u003e",
+  "iconSize": [120, 40],
+  "iconAnchor": [50, -10],
+  "className": "empty",
+});
+        
+    
+        var popup_44635b927dabc4354b555c3664b2be89 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a8b26eb538beb20c28d7244f1810c69a = $(`<div id="html_a8b26eb538beb20c28d7244f1810c69a" style="width: 100.0%; height: 100.0%;"><b>Couche-Tard</b><br>Price: 159.9$<br>Location: 207 Boulevard Industriel Saint-Eustache<br>Latitude: 45.56873239999999<br>Longitude: -73.92436169999999</div>`)[0];
+                popup_44635b927dabc4354b555c3664b2be89.setContent(html_a8b26eb538beb20c28d7244f1810c69a);
+            
+        
+
+        marker_44c0860583579f18960181e738acf302.bindPopup(popup_44635b927dabc4354b555c3664b2be89)
+        ;
+
+        
+    
+    
+            marker_44c0860583579f18960181e738acf302.bindTooltip(
+                `<div>
+                     Couche-Tard - 159.9$
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_44c0860583579f18960181e738acf302.setIcon(div_icon_a57442ed97861d971ada739a64d20188);
+            
+    
+            var marker_d96c65f7219b991ccf9c79fb40788233 = L.marker(
+                [46.1174522, -74.5646381],
+                {
+}
+            ).addTo(map_a255a69abd952dfb2f4e22fa30be35f4);
+        
+    
+            var div_icon_e37947c205b3939c1685f658f8e4d251 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; color: white; background-color: #50D42F; padding: 3px 6px; border-radius: 3px; white-space: nowrap;\"\u003e\u003cb\u003eP\u00e9tro Canada\u26fd\ufe0f\u003c/b\u003e\u003cbr\u003e161.4$\u003c/div\u003e",
+  "iconSize": [120, 40],
+  "iconAnchor": [50, -10],
+  "className": "empty",
+});
+        
+    
+        var popup_de3fd4fd20995a71277265e91eae866a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e90810a0248bd355bef20eb49a3f0f8e = $(`<div id="html_e90810a0248bd355bef20eb49a3f0f8e" style="width: 100.0%; height: 100.0%;"><b>Pétro Canada</b><br>Price: 161.4$<br>Location: 282 Rte 117 Mont-Tremblant<br>Latitude: 46.1174522<br>Longitude: -74.5646381</div>`)[0];
+                popup_de3fd4fd20995a71277265e91eae866a.setContent(html_e90810a0248bd355bef20eb49a3f0f8e);
+            
+        
+
+        marker_d96c65f7219b991ccf9c79fb40788233.bindPopup(popup_de3fd4fd20995a71277265e91eae866a)
+        ;
+
+        
+    
+    
+            marker_d96c65f7219b991ccf9c79fb40788233.bindTooltip(
+                `<div>
+                     Pétro Canada - 161.4$
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d96c65f7219b991ccf9c79fb40788233.setIcon(div_icon_e37947c205b3939c1685f658f8e4d251);
+            
+    
+            var marker_44be4fabffd86cb760d4d6e76665feeb = L.marker(
+                [46.1148987, -74.5761284],
+                {
+}
+            ).addTo(map_a255a69abd952dfb2f4e22fa30be35f4);
+        
+    
+            var div_icon_2e31bcacc5cf3ea427045ffed7931e33 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; color: white; background-color: #50D42F; padding: 3px 6px; border-radius: 3px; white-space: nowrap;\"\u003e\u003cb\u003eShell\u26fd\ufe0f\u003c/b\u003e\u003cbr\u003e161.4$\u003c/div\u003e",
+  "iconSize": [120, 40],
+  "iconAnchor": [50, -10],
+  "className": "empty",
+});
+        
+    
+        var popup_66856fa0e5bfec74e01331f251cb48cf = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_04bdc47bcb106c770ad7cd7f45288261 = $(`<div id="html_04bdc47bcb106c770ad7cd7f45288261" style="width: 100.0%; height: 100.0%;"><b>Shell</b><br>Price: 161.4$<br>Location: 445 Route 117 Mont-Tremblant<br>Latitude: 46.1148987<br>Longitude: -74.5761284</div>`)[0];
+                popup_66856fa0e5bfec74e01331f251cb48cf.setContent(html_04bdc47bcb106c770ad7cd7f45288261);
+            
+        
+
+        marker_44be4fabffd86cb760d4d6e76665feeb.bindPopup(popup_66856fa0e5bfec74e01331f251cb48cf)
+        ;
+
+        
+    
+    
+            marker_44be4fabffd86cb760d4d6e76665feeb.bindTooltip(
+                `<div>
+                     Shell - 161.4$
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_44be4fabffd86cb760d4d6e76665feeb.setIcon(div_icon_2e31bcacc5cf3ea427045ffed7931e33);
+            
+    
+            var marker_e4a46a999fc406699987200840b48e67 = L.marker(
+                [46.115466, -74.571119],
+                {
+}
+            ).addTo(map_a255a69abd952dfb2f4e22fa30be35f4);
+        
+    
+            var div_icon_3d7db2ec75cb916fd204fc46f2249b7c = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; color: white; background-color: #50D42F; padding: 3px 6px; border-radius: 3px; white-space: nowrap;\"\u003e\u003cb\u003eUltramar\u26fd\ufe0f\u003c/b\u003e\u003cbr\u003e161.4$\u003c/div\u003e",
+  "iconSize": [120, 40],
+  "iconAnchor": [50, -10],
+  "className": "empty",
+});
+        
+    
+        var popup_e1397c48b6a45cc654a4bb0080c3c75f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_334643c01fc01049e7f6249465c77603 = $(`<div id="html_334643c01fc01049e7f6249465c77603" style="width: 100.0%; height: 100.0%;"><b>Ultramar</b><br>Price: 161.4$<br>Location: 359 route 117 Mont-Tremblant<br>Latitude: 46.115466<br>Longitude: -74.571119</div>`)[0];
+                popup_e1397c48b6a45cc654a4bb0080c3c75f.setContent(html_334643c01fc01049e7f6249465c77603);
+            
+        
+
+        marker_e4a46a999fc406699987200840b48e67.bindPopup(popup_e1397c48b6a45cc654a4bb0080c3c75f)
+        ;
+
+        
+    
+    
+            marker_e4a46a999fc406699987200840b48e67.bindTooltip(
+                `<div>
+                     Ultramar - 161.4$
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e4a46a999fc406699987200840b48e67.setIcon(div_icon_3d7db2ec75cb916fd204fc46f2249b7c);
+            
+    
+            var marker_8d88dcd8dea82d410f82090862e8e3d3 = L.marker(
+                [45.5023265, -74.0001833],
+                {
+}
+            ).addTo(map_a255a69abd952dfb2f4e22fa30be35f4);
+        
+    
+            var div_icon_c4ac3556ad833292b1cbb4ee1e9cfcc0 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; color: white; background-color: #50D42F; padding: 3px 6px; border-radius: 3px; white-space: nowrap;\"\u003e\u003cb\u003eUltramar\u26fd\ufe0f\u003c/b\u003e\u003cbr\u003e161.9$\u003c/div\u003e",
+  "iconSize": [120, 40],
+  "iconAnchor": [50, -10],
+  "className": "empty",
+});
+        
+    
+        var popup_185754617a69d359098f0b0dc74ab477 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f6d3d00b7aab712ecaaa7d90ed142c3d = $(`<div id="html_f6d3d00b7aab712ecaaa7d90ed142c3d" style="width: 100.0%; height: 100.0%;"><b>Ultramar</b><br>Price: 161.9$<br>Location: 4289 Chemin d'Oka Saint-Joseph-du-Lac<br>Latitude: 45.5023265<br>Longitude: -74.0001833</div>`)[0];
+                popup_185754617a69d359098f0b0dc74ab477.setContent(html_f6d3d00b7aab712ecaaa7d90ed142c3d);
+            
+        
+
+        marker_8d88dcd8dea82d410f82090862e8e3d3.bindPopup(popup_185754617a69d359098f0b0dc74ab477)
+        ;
+
+        
+    
+    
+            marker_8d88dcd8dea82d410f82090862e8e3d3.bindTooltip(
+                `<div>
+                     Ultramar - 161.9$
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_8d88dcd8dea82d410f82090862e8e3d3.setIcon(div_icon_c4ac3556ad833292b1cbb4ee1e9cfcc0);
+            
+    
+            var marker_cccae9349c47b50dad53773564875456 = L.marker(
+                [45.5286093, -74.2000149],
+                {
+}
+            ).addTo(map_a255a69abd952dfb2f4e22fa30be35f4);
+        
+    
+            var div_icon_71db34e883f1ea4f20dd5fa5285337f8 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; color: white; background-color: #50D42F; padding: 3px 6px; border-radius: 3px; white-space: nowrap;\"\u003e\u003cb\u003eCrevier\u26fd\ufe0f\u003c/b\u003e\u003cbr\u003e162.9$\u003c/div\u003e",
+  "iconSize": [120, 40],
+  "iconAnchor": [50, -10],
+  "className": "empty",
+});
+        
+    
+        var popup_9ebf280418b984d37f3eab7df93aebfd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b881c34dbf0d27ddf947251d7f37746a = $(`<div id="html_b881c34dbf0d27ddf947251d7f37746a" style="width: 100.0%; height: 100.0%;"><b>Crevier</b><br>Price: 162.9$<br>Location: 2135 Route 344 Saint-Placide<br>Latitude: 45.5286093<br>Longitude: -74.2000149</div>`)[0];
+                popup_9ebf280418b984d37f3eab7df93aebfd.setContent(html_b881c34dbf0d27ddf947251d7f37746a);
+            
+        
+
+        marker_cccae9349c47b50dad53773564875456.bindPopup(popup_9ebf280418b984d37f3eab7df93aebfd)
+        ;
+
+        
+    
+    
+            marker_cccae9349c47b50dad53773564875456.bindTooltip(
+                `<div>
+                     Crevier - 162.9$
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_cccae9349c47b50dad53773564875456.setIcon(div_icon_71db34e883f1ea4f20dd5fa5285337f8);
+            
+    
+            var marker_f31f9deea9314052f6313e37cff980b9 = L.marker(
+                [45.2618982, -73.7879809],
+                {
+}
+            ).addTo(map_a255a69abd952dfb2f4e22fa30be35f4);
+        
+    
+            var div_icon_1ec2424333b2a98b406c3d43c2975bfb = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; color: white; background-color: #50D42F; padding: 3px 6px; border-radius: 3px; white-space: nowrap;\"\u003e\u003cb\u003eUltramar\u26fd\ufe0f\u003c/b\u003e\u003cbr\u003e163$\u003c/div\u003e",
+  "iconSize": [120, 40],
+  "iconAnchor": [50, -10],
+  "className": "empty",
+});
+        
+    
+        var popup_3c049a610dc16b7111a360cf882ecec4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_80901779093fde27f720974496e0629f = $(`<div id="html_80901779093fde27f720974496e0629f" style="width: 100.0%; height: 100.0%;"><b>Ultramar</b><br>Price: 163$<br>Location: 765 Boulevard Saint-Jean-Baptiste Sainte-Martine<br>Latitude: 45.2618982<br>Longitude: -73.7879809</div>`)[0];
+                popup_3c049a610dc16b7111a360cf882ecec4.setContent(html_80901779093fde27f720974496e0629f);
+            
+        
+
+        marker_f31f9deea9314052f6313e37cff980b9.bindPopup(popup_3c049a610dc16b7111a360cf882ecec4)
+        ;
+
+        
+    
+    
+            marker_f31f9deea9314052f6313e37cff980b9.bindTooltip(
+                `<div>
+                     Ultramar - 163$
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f31f9deea9314052f6313e37cff980b9.setIcon(div_icon_1ec2424333b2a98b406c3d43c2975bfb);
+            
+    
+            var marker_4e71539c7a526173d9bd4e1eee0707f7 = L.marker(
+                [45.7570863, -74.08908579999999],
+                {
+}
+            ).addTo(map_a255a69abd952dfb2f4e22fa30be35f4);
+        
+    
+            var div_icon_86da25435fe334625c07d69b2e883a94 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; color: white; background-color: #50D42F; padding: 3px 6px; border-radius: 3px; white-space: nowrap;\"\u003e\u003cb\u003eStation PB\u26fd\ufe0f\u003c/b\u003e\u003cbr\u003e163.9$\u003c/div\u003e",
+  "iconSize": [120, 40],
+  "iconAnchor": [50, -10],
+  "className": "empty",
+});
+        
+    
+        var popup_1c12ea4a7f363b7ddf2cce0d69a7c550 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_508aa3ea9f0c6aa8054bb94cc5f0f5c0 = $(`<div id="html_508aa3ea9f0c6aa8054bb94cc5f0f5c0" style="width: 100.0%; height: 100.0%;"><b>Station PB</b><br>Price: 163.9$<br>Location: 343 Côte Saint-Nicholas Saint-Colomban<br>Latitude: 45.7570863<br>Longitude: -74.08908579999999</div>`)[0];
+                popup_1c12ea4a7f363b7ddf2cce0d69a7c550.setContent(html_508aa3ea9f0c6aa8054bb94cc5f0f5c0);
+            
+        
+
+        marker_4e71539c7a526173d9bd4e1eee0707f7.bindPopup(popup_1c12ea4a7f363b7ddf2cce0d69a7c550)
+        ;
+
+        
+    
+    
+            marker_4e71539c7a526173d9bd4e1eee0707f7.bindTooltip(
+                `<div>
+                     Station PB - 163.9$
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4e71539c7a526173d9bd4e1eee0707f7.setIcon(div_icon_86da25435fe334625c07d69b2e883a94);
+            
+    
+            var marker_1ca1dbbcb2700761daeedc3418c433d0 = L.marker(
+                [45.8543308, -74.0677497],
+                {
+}
+            ).addTo(map_a255a69abd952dfb2f4e22fa30be35f4);
+        
+    
+            var div_icon_0df8aeec107a91008279906cd12a7047 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; color: white; background-color: #50D42F; padding: 3px 6px; border-radius: 3px; white-space: nowrap;\"\u003e\u003cb\u003eUltramar\u26fd\ufe0f\u003c/b\u003e\u003cbr\u003e163.9$\u003c/div\u003e",
+  "iconSize": [120, 40],
+  "iconAnchor": [50, -10],
+  "className": "empty",
+});
+        
+    
+        var popup_8eb0ad4f212fbf3451d774b925523576 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d785881529057090a1c2f97778375903 = $(`<div id="html_d785881529057090a1c2f97778375903" style="width: 100.0%; height: 100.0%;"><b>Ultramar</b><br>Price: 163.9$<br>Location: 2795 Boulevard du Curé Labelle Prevost<br>Latitude: 45.8543308<br>Longitude: -74.0677497</div>`)[0];
+                popup_8eb0ad4f212fbf3451d774b925523576.setContent(html_d785881529057090a1c2f97778375903);
+            
+        
+
+        marker_1ca1dbbcb2700761daeedc3418c433d0.bindPopup(popup_8eb0ad4f212fbf3451d774b925523576)
+        ;
+
+        
+    
+    
+            marker_1ca1dbbcb2700761daeedc3418c433d0.bindTooltip(
+                `<div>
+                     Ultramar - 163.9$
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1ca1dbbcb2700761daeedc3418c433d0.setIcon(div_icon_0df8aeec107a91008279906cd12a7047);
+            
+    
+            var marker_82d513b93010696f43788f3c38a367e9 = L.marker(
+                [45.8236702, -73.8900484],
+                {
+}
+            ).addTo(map_a255a69abd952dfb2f4e22fa30be35f4);
+        
+    
+            var div_icon_b9a88ef10aa46eb2da8276a375b30f07 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; color: white; background-color: #50D42F; padding: 3px 6px; border-radius: 3px; white-space: nowrap;\"\u003e\u003cb\u003eSuper Gaz\u26fd\ufe0f\u003c/b\u003e\u003cbr\u003e163.9$\u003c/div\u003e",
+  "iconSize": [120, 40],
+  "iconAnchor": [50, -10],
+  "className": "empty",
+});
+        
+    
+        var popup_6ff4a7c4dfc9e0c4eb4b29cb7d679a15 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4cd649fc583dba320b5fb02aac14d846 = $(`<div id="html_4cd649fc583dba320b5fb02aac14d846" style="width: 100.0%; height: 100.0%;"><b>Super Gaz</b><br>Price: 163.9$<br>Location: 2043 Bd Ste Sophie Sainte-Sophie<br>Latitude: 45.8236702<br>Longitude: -73.8900484</div>`)[0];
+                popup_6ff4a7c4dfc9e0c4eb4b29cb7d679a15.setContent(html_4cd649fc583dba320b5fb02aac14d846);
+            
+        
+
+        marker_82d513b93010696f43788f3c38a367e9.bindPopup(popup_6ff4a7c4dfc9e0c4eb4b29cb7d679a15)
+        ;
+
+        
+    
+    
+            marker_82d513b93010696f43788f3c38a367e9.bindTooltip(
+                `<div>
+                     Super Gaz - 163.9$
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_82d513b93010696f43788f3c38a367e9.setIcon(div_icon_b9a88ef10aa46eb2da8276a375b30f07);
+            
+    
+            var marker_e926711b0987b229d8e79e514aae9e21 = L.marker(
+                [46.0440766, -74.27209789999999],
+                {
+}
+            ).addTo(map_a255a69abd952dfb2f4e22fa30be35f4);
+        
+    
+            var div_icon_e73211a079cb63027d0b726bfddf4213 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; color: white; background-color: #50D42F; padding: 3px 6px; border-radius: 3px; white-space: nowrap;\"\u003e\u003cb\u003eUltramar\u26fd\ufe0f\u003c/b\u003e\u003cbr\u003e163.9$\u003c/div\u003e",
+  "iconSize": [120, 40],
+  "iconAnchor": [50, -10],
+  "className": "empty",
+});
+        
+    
+        var popup_07c109419d4114daeded35557e738a96 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b115888e569bfaea956b6e6ca96abf5f = $(`<div id="html_b115888e569bfaea956b6e6ca96abf5f" style="width: 100.0%; height: 100.0%;"><b>Ultramar</b><br>Price: 163.9$<br>Location: 661 Rue Principale Est Sainte-Agathe-des-Monts<br>Latitude: 46.0440766<br>Longitude: -74.27209789999999</div>`)[0];
+                popup_07c109419d4114daeded35557e738a96.setContent(html_b115888e569bfaea956b6e6ca96abf5f);
+            
+        
+
+        marker_e926711b0987b229d8e79e514aae9e21.bindPopup(popup_07c109419d4114daeded35557e738a96)
+        ;
+
+        
+    
+    
+            marker_e926711b0987b229d8e79e514aae9e21.bindTooltip(
+                `<div>
+                     Ultramar - 163.9$
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e926711b0987b229d8e79e514aae9e21.setIcon(div_icon_e73211a079cb63027d0b726bfddf4213);
+            
+    
+            var marker_20c37241ff2ea06942c283ac175ba5ff = L.marker(
+                [46.043275, -74.26377769999999],
+                {
+}
+            ).addTo(map_a255a69abd952dfb2f4e22fa30be35f4);
+        
+    
+            var div_icon_8e6084aa6cb579b4d884441e3375b58b = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; color: white; background-color: #50D42F; padding: 3px 6px; border-radius: 3px; white-space: nowrap;\"\u003e\u003cb\u003eShell\u26fd\ufe0f\u003c/b\u003e\u003cbr\u003e163.9$\u003c/div\u003e",
+  "iconSize": [120, 40],
+  "iconAnchor": [50, -10],
+  "className": "empty",
+});
+        
+    
+        var popup_30466fda872d4138bf77d69066a07cac = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_34a460752dd7365736c830b9fec1f7c2 = $(`<div id="html_34a460752dd7365736c830b9fec1f7c2" style="width: 100.0%; height: 100.0%;"><b>Shell</b><br>Price: 163.9$<br>Location: 1100 Rue Principale Est Sainte-Agathe-des-Monts<br>Latitude: 46.043275<br>Longitude: -74.26377769999999</div>`)[0];
+                popup_30466fda872d4138bf77d69066a07cac.setContent(html_34a460752dd7365736c830b9fec1f7c2);
+            
+        
+
+        marker_20c37241ff2ea06942c283ac175ba5ff.bindPopup(popup_30466fda872d4138bf77d69066a07cac)
+        ;
+
+        
+    
+    
+            marker_20c37241ff2ea06942c283ac175ba5ff.bindTooltip(
+                `<div>
+                     Shell - 163.9$
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_20c37241ff2ea06942c283ac175ba5ff.setIcon(div_icon_8e6084aa6cb579b4d884441e3375b58b);
+            
+    
+            var marker_f028a6883a684a47bd510506269945fd = L.marker(
+                [45.8243511, -74.0500398],
+                {
+}
+            ).addTo(map_a255a69abd952dfb2f4e22fa30be35f4);
+        
+    
+            var div_icon_953733001d977beb4b59166fbe2dd369 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; color: white; background-color: #50D42F; padding: 3px 6px; border-radius: 3px; white-space: nowrap;\"\u003e\u003cb\u003eSonic\u26fd\ufe0f\u003c/b\u003e\u003cbr\u003e163.9$\u003c/div\u003e",
+  "iconSize": [120, 40],
+  "iconAnchor": [50, -10],
+  "className": "empty",
+});
+        
+    
+        var popup_2fb81c602a524c19e498c1113fd70a13 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_750c39915fd2f2fc6a4f46dd7207c6f9 = $(`<div id="html_750c39915fd2f2fc6a4f46dd7207c6f9" style="width: 100.0%; height: 100.0%;"><b>Sonic</b><br>Price: 163.9$<br>Location: 2487 Boulevard du Curé Labelle Prévost<br>Latitude: 45.8243511<br>Longitude: -74.0500398</div>`)[0];
+                popup_2fb81c602a524c19e498c1113fd70a13.setContent(html_750c39915fd2f2fc6a4f46dd7207c6f9);
+            
+        
+
+        marker_f028a6883a684a47bd510506269945fd.bindPopup(popup_2fb81c602a524c19e498c1113fd70a13)
+        ;
+
+        
+    
+    
+            marker_f028a6883a684a47bd510506269945fd.bindTooltip(
+                `<div>
+                     Sonic - 163.9$
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f028a6883a684a47bd510506269945fd.setIcon(div_icon_953733001d977beb4b59166fbe2dd369);
+            
+    
+            var marker_84d8b1751246f5e8e5ba2ceedab44578 = L.marker(
+                [45.8600031, -74.0706702],
+                {
+}
+            ).addTo(map_a255a69abd952dfb2f4e22fa30be35f4);
+        
+    
+            var div_icon_e2a468817f9700724df9df392e3e18e8 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; color: white; background-color: #50D42F; padding: 3px 6px; border-radius: 3px; white-space: nowrap;\"\u003e\u003cb\u003eShell\u26fd\ufe0f\u003c/b\u003e\u003cbr\u003e163.9$\u003c/div\u003e",
+  "iconSize": [120, 40],
+  "iconAnchor": [50, -10],
+  "className": "empty",
+});
+        
+    
+        var popup_84be1d4e513b38c7aa5f54e7aca8c41f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a11e2c772b4c4fe618c5ee40806c008f = $(`<div id="html_a11e2c772b4c4fe618c5ee40806c008f" style="width: 100.0%; height: 100.0%;"><b>Shell</b><br>Price: 163.9$<br>Location: 2900 Boulevard du Curé-Labelle Prévost<br>Latitude: 45.8600031<br>Longitude: -74.0706702</div>`)[0];
+                popup_84be1d4e513b38c7aa5f54e7aca8c41f.setContent(html_a11e2c772b4c4fe618c5ee40806c008f);
+            
+        
+
+        marker_84d8b1751246f5e8e5ba2ceedab44578.bindPopup(popup_84be1d4e513b38c7aa5f54e7aca8c41f)
+        ;
+
+        
+    
+    
+            marker_84d8b1751246f5e8e5ba2ceedab44578.bindTooltip(
+                `<div>
+                     Shell - 163.9$
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_84d8b1751246f5e8e5ba2ceedab44578.setIcon(div_icon_e2a468817f9700724df9df392e3e18e8);
+            
+    
+            var marker_1a1ed680b0997673c0e154f037ad6c1c = L.marker(
+                [46.0440136, -74.26930899999999],
+                {
+}
+            ).addTo(map_a255a69abd952dfb2f4e22fa30be35f4);
+        
+    
+            var div_icon_18f14fa08ebee803d9a539f84af44bde = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; color: white; background-color: #50D42F; padding: 3px 6px; border-radius: 3px; white-space: nowrap;\"\u003e\u003cb\u003ePetro-Canada\u26fd\ufe0f\u003c/b\u003e\u003cbr\u003e163.9$\u003c/div\u003e",
+  "iconSize": [120, 40],
+  "iconAnchor": [50, -10],
+  "className": "empty",
+});
+        
+    
+        var popup_55da910ebc33a3ceef77c3d4562fac6d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6283539ecf364e419abe0881adb8dfaf = $(`<div id="html_6283539ecf364e419abe0881adb8dfaf" style="width: 100.0%; height: 100.0%;"><b>Petro-Canada</b><br>Price: 163.9$<br>Location: 730 Rue Principale Est Sainte-Agathe-des-Monts<br>Latitude: 46.0440136<br>Longitude: -74.26930899999999</div>`)[0];
+                popup_55da910ebc33a3ceef77c3d4562fac6d.setContent(html_6283539ecf364e419abe0881adb8dfaf);
+            
+        
+
+        marker_1a1ed680b0997673c0e154f037ad6c1c.bindPopup(popup_55da910ebc33a3ceef77c3d4562fac6d)
+        ;
+
+        
+    
+    
+            marker_1a1ed680b0997673c0e154f037ad6c1c.bindTooltip(
+                `<div>
+                     Petro-Canada - 163.9$
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1a1ed680b0997673c0e154f037ad6c1c.setIcon(div_icon_18f14fa08ebee803d9a539f84af44bde);
+            
+    
+            var marker_df239f81e15d25cc0d82fc66fa44aeb3 = L.marker(
+                [45.8841147, -74.1026782],
+                {
+}
+            ).addTo(map_a255a69abd952dfb2f4e22fa30be35f4);
+        
+    
+            var div_icon_e15d17d08a783b1c305a1b998781d9fc = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; color: white; background-color: #50D42F; padding: 3px 6px; border-radius: 3px; white-space: nowrap;\"\u003e\u003cb\u003eShell\u26fd\ufe0f\u003c/b\u003e\u003cbr\u003e163.9$\u003c/div\u003e",
+  "iconSize": [120, 40],
+  "iconAnchor": [50, -10],
+  "className": "empty",
+});
+        
+    
+        var popup_a41b350570748ba8ec493da59e6fbcd5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_20964cb9aab10b92b98c69675df3c9e1 = $(`<div id="html_20964cb9aab10b92b98c69675df3c9e1" style="width: 100.0%; height: 100.0%;"><b>Shell</b><br>Price: 163.9$<br>Location: 134 Route 117 Sainte-Anne-des-Lacs<br>Latitude: 45.8841147<br>Longitude: -74.1026782</div>`)[0];
+                popup_a41b350570748ba8ec493da59e6fbcd5.setContent(html_20964cb9aab10b92b98c69675df3c9e1);
+            
+        
+
+        marker_df239f81e15d25cc0d82fc66fa44aeb3.bindPopup(popup_a41b350570748ba8ec493da59e6fbcd5)
+        ;
+
+        
+    
+    
+            marker_df239f81e15d25cc0d82fc66fa44aeb3.bindTooltip(
+                `<div>
+                     Shell - 163.9$
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_df239f81e15d25cc0d82fc66fa44aeb3.setIcon(div_icon_e15d17d08a783b1c305a1b998781d9fc);
+            
+    
+            var marker_f14e650d4e30ee0007c5a0fc15881238 = L.marker(
+                [45.63698189999999, -73.9843685],
+                {
+}
+            ).addTo(map_a255a69abd952dfb2f4e22fa30be35f4);
+        
+    
+            var div_icon_8dd5e3b8385ca6ae5f062adc3d1e4e57 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; color: white; background-color: #50D42F; padding: 3px 6px; border-radius: 3px; white-space: nowrap;\"\u003e\u003cb\u003eCouche-Tard\u26fd\ufe0f\u003c/b\u003e\u003cbr\u003e164.9$\u003c/div\u003e",
+  "iconSize": [120, 40],
+  "iconAnchor": [50, -10],
+  "className": "empty",
+});
+        
+    
+        var popup_eb58babaa348ee491dc6102181d3c7be = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_677d757503801bc360f6623c0d664247 = $(`<div id="html_677d757503801bc360f6623c0d664247" style="width: 100.0%; height: 100.0%;"><b>Couche-Tard</b><br>Price: 164.9$<br>Location: 8855 Saint-Jacques St Mirabel QC J7N 2E7 Mirabel<br>Latitude: 45.63698189999999<br>Longitude: -73.9843685</div>`)[0];
+                popup_eb58babaa348ee491dc6102181d3c7be.setContent(html_677d757503801bc360f6623c0d664247);
+            
+        
+
+        marker_f14e650d4e30ee0007c5a0fc15881238.bindPopup(popup_eb58babaa348ee491dc6102181d3c7be)
+        ;
+
+        
+    
+    
+            marker_f14e650d4e30ee0007c5a0fc15881238.bindTooltip(
+                `<div>
+                     Couche-Tard - 164.9$
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f14e650d4e30ee0007c5a0fc15881238.setIcon(div_icon_8dd5e3b8385ca6ae5f062adc3d1e4e57);
+            
+    
+            var marker_eb07c221fb8c157a45ad3d5c5182d32d = L.marker(
+                [45.6284152, -73.9810818],
+                {
+}
+            ).addTo(map_a255a69abd952dfb2f4e22fa30be35f4);
+        
+    
+            var div_icon_046b2d07e0c162bf0ea599bbf15aa067 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; color: white; background-color: #50D42F; padding: 3px 6px; border-radius: 3px; white-space: nowrap;\"\u003e\u003cb\u003eUltramar\u26fd\ufe0f\u003c/b\u003e\u003cbr\u003e164.9$\u003c/div\u003e",
+  "iconSize": [120, 40],
+  "iconAnchor": [50, -10],
+  "className": "empty",
+});
+        
+    
+        var popup_1bd9602c0b139a3ee155f22872444c3f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_801c7b34088820139631853e76470991 = $(`<div id="html_801c7b34088820139631853e76470991" style="width: 100.0%; height: 100.0%;"><b>Ultramar</b><br>Price: 164.9$<br>Location: 8201 Rue Saint-Jacques Mirabel<br>Latitude: 45.6284152<br>Longitude: -73.9810818</div>`)[0];
+                popup_1bd9602c0b139a3ee155f22872444c3f.setContent(html_801c7b34088820139631853e76470991);
+            
+        
+
+        marker_eb07c221fb8c157a45ad3d5c5182d32d.bindPopup(popup_1bd9602c0b139a3ee155f22872444c3f)
+        ;
+
+        
+    
+    
+            marker_eb07c221fb8c157a45ad3d5c5182d32d.bindTooltip(
+                `<div>
+                     Ultramar - 164.9$
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_eb07c221fb8c157a45ad3d5c5182d32d.setIcon(div_icon_046b2d07e0c162bf0ea599bbf15aa067);
+            
+    
+            var marker_6e9f8247de6a14cc25ac94a6de3df7eb = L.marker(
+                [45.62745959999999, -73.9705525],
+                {
+}
+            ).addTo(map_a255a69abd952dfb2f4e22fa30be35f4);
+        
+    
+            var div_icon_9c2164250c2970323862b3fd59002c06 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; color: white; background-color: #50D42F; padding: 3px 6px; border-radius: 3px; white-space: nowrap;\"\u003e\u003cb\u003eBelisle\u26fd\ufe0f\u003c/b\u003e\u003cbr\u003e164.9$\u003c/div\u003e",
+  "iconSize": [120, 40],
+  "iconAnchor": [50, -10],
+  "className": "empty",
+});
+        
+    
+        var popup_dcebd4e14d180f1373b2a9344c8ffda9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fbdae0a05f87375b5d86323b7dade28f = $(`<div id="html_fbdae0a05f87375b5d86323b7dade28f" style="width: 100.0%; height: 100.0%;"><b>Belisle</b><br>Price: 164.9$<br>Location: 15630 Rue de Saint Augustin Mirabel<br>Latitude: 45.62745959999999<br>Longitude: -73.9705525</div>`)[0];
+                popup_dcebd4e14d180f1373b2a9344c8ffda9.setContent(html_fbdae0a05f87375b5d86323b7dade28f);
+            
+        
+
+        marker_6e9f8247de6a14cc25ac94a6de3df7eb.bindPopup(popup_dcebd4e14d180f1373b2a9344c8ffda9)
+        ;
+
+        
+    
+    
+            marker_6e9f8247de6a14cc25ac94a6de3df7eb.bindTooltip(
+                `<div>
+                     Belisle - 164.9$
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6e9f8247de6a14cc25ac94a6de3df7eb.setIcon(div_icon_9c2164250c2970323862b3fd59002c06);
+            
+    
+            var marker_9435ea7a98258b7d83ed219763d2d782 = L.marker(
+                [45.6020939, -73.94337589999999],
+                {
+}
+            ).addTo(map_a255a69abd952dfb2f4e22fa30be35f4);
+        
+    
+            var div_icon_323067b904171f053ff2a9967aa13372 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; color: white; background-color: #50D42F; padding: 3px 6px; border-radius: 3px; white-space: nowrap;\"\u003e\u003cb\u003ePetrole Belisle et Belisle\u26fd\ufe0f\u003c/b\u003e\u003cbr\u003e164.9$\u003c/div\u003e",
+  "iconSize": [120, 40],
+  "iconAnchor": [50, -10],
+  "className": "empty",
+});
+        
+    
+        var popup_ee548dfec15c6cb09cccef75b5469eea = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ed85adaad4ff1d75c1e48e162dbc6a0a = $(`<div id="html_ed85adaad4ff1d75c1e48e162dbc6a0a" style="width: 100.0%; height: 100.0%;"><b>Petrole Belisle et Belisle</b><br>Price: 164.9$<br>Location: 820 25e Av Saint-Eustache<br>Latitude: 45.6020939<br>Longitude: -73.94337589999999</div>`)[0];
+                popup_ee548dfec15c6cb09cccef75b5469eea.setContent(html_ed85adaad4ff1d75c1e48e162dbc6a0a);
+            
+        
+
+        marker_9435ea7a98258b7d83ed219763d2d782.bindPopup(popup_ee548dfec15c6cb09cccef75b5469eea)
+        ;
+
+        
+    
+    
+            marker_9435ea7a98258b7d83ed219763d2d782.bindTooltip(
+                `<div>
+                     Petrole Belisle et Belisle - 164.9$
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9435ea7a98258b7d83ed219763d2d782.setIcon(div_icon_323067b904171f053ff2a9967aa13372);
+            
+    
+            var marker_fb1f15060793e20509273a1a5b10bb77 = L.marker(
+                [45.6696038, -73.7550163],
+                {
+}
+            ).addTo(map_a255a69abd952dfb2f4e22fa30be35f4);
+        
+    
+            var div_icon_c448ba8e018d9ef97e41ec4da8b1632e = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; color: white; background-color: #50D42F; padding: 3px 6px; border-radius: 3px; white-space: nowrap;\"\u003e\u003cb\u003eEsso\u26fd\ufe0f\u003c/b\u003e\u003cbr\u003e164.9$\u003c/div\u003e",
+  "iconSize": [120, 40],
+  "iconAnchor": [50, -10],
+  "className": "empty",
+});
+        
+    
+        var popup_0c038e97f1dea098ba9af7fbaff902a6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_00d290ed6df6ab24550944f0302cdc5c = $(`<div id="html_00d290ed6df6ab24550944f0302cdc5c" style="width: 100.0%; height: 100.0%;"><b>Esso</b><br>Price: 164.9$<br>Location: 372 Boulevard Adolphe-Chapleau Bois-des-Filion<br>Latitude: 45.6696038<br>Longitude: -73.7550163</div>`)[0];
+                popup_0c038e97f1dea098ba9af7fbaff902a6.setContent(html_00d290ed6df6ab24550944f0302cdc5c);
+            
+        
+
+        marker_fb1f15060793e20509273a1a5b10bb77.bindPopup(popup_0c038e97f1dea098ba9af7fbaff902a6)
+        ;
+
+        
+    
+    
+            marker_fb1f15060793e20509273a1a5b10bb77.bindTooltip(
+                `<div>
+                     Esso - 164.9$
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_fb1f15060793e20509273a1a5b10bb77.setIcon(div_icon_c448ba8e018d9ef97e41ec4da8b1632e);
+            
+    
+            var marker_244df0c915eedeae8dad9c414a04d848 = L.marker(
+                [45.6275527, -73.9699268],
+                {
+}
+            ).addTo(map_a255a69abd952dfb2f4e22fa30be35f4);
+        
+    
+            var div_icon_d1672362497df3dcf79a0ccbfab0a7c5 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; color: white; background-color: #50D42F; padding: 3px 6px; border-radius: 3px; white-space: nowrap;\"\u003e\u003cb\u003eUltramar\u26fd\ufe0f\u003c/b\u003e\u003cbr\u003e164.9$\u003c/div\u003e",
+  "iconSize": [120, 40],
+  "iconAnchor": [50, -10],
+  "className": "empty",
+});
+        
+    
+        var popup_b581d03c61f0ec50c5d0f324a2130377 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_71159e2ab7adeff54231378482e77e35 = $(`<div id="html_71159e2ab7adeff54231378482e77e35" style="width: 100.0%; height: 100.0%;"><b>Ultramar</b><br>Price: 164.9$<br>Location: 8174 Chemin du Chicot N Mirabel<br>Latitude: 45.6275527<br>Longitude: -73.9699268</div>`)[0];
+                popup_b581d03c61f0ec50c5d0f324a2130377.setContent(html_71159e2ab7adeff54231378482e77e35);
+            
+        
+
+        marker_244df0c915eedeae8dad9c414a04d848.bindPopup(popup_b581d03c61f0ec50c5d0f324a2130377)
+        ;
+
+        
+    
+    
+            marker_244df0c915eedeae8dad9c414a04d848.bindTooltip(
+                `<div>
+                     Ultramar - 164.9$
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_244df0c915eedeae8dad9c414a04d848.setIcon(div_icon_d1672362497df3dcf79a0ccbfab0a7c5);
+            
+    
+            var marker_3ee1e44fb3ae918f3ef0e442a3aa7643 = L.marker(
+                [45.5748837, -73.8778724],
+                {
+}
+            ).addTo(map_a255a69abd952dfb2f4e22fa30be35f4);
+        
+    
+            var div_icon_68725864b4929acbe332bbe73775a667 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; color: white; background-color: #FF8C00; padding: 3px 6px; border-radius: 3px; white-space: nowrap;\"\u003e\u003cb\u003eB\u00e9lisle\u26fd\ufe0f\u003c/b\u003e\u003cbr\u003e165.9$\u003c/div\u003e",
+  "iconSize": [120, 40],
+  "iconAnchor": [50, -10],
+  "className": "empty",
+});
+        
+    
+        var popup_643e3796422c0539150ddc335e645042 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a0164325508ff48ca03fc6d1a55cdece = $(`<div id="html_a0164325508ff48ca03fc6d1a55cdece" style="width: 100.0%; height: 100.0%;"><b>Bélisle</b><br>Price: 165.9$<br>Location: 215 Rue Saint-Laurent Saint-Eustache<br>Latitude: 45.5748837<br>Longitude: -73.8778724</div>`)[0];
+                popup_643e3796422c0539150ddc335e645042.setContent(html_a0164325508ff48ca03fc6d1a55cdece);
+            
+        
+
+        marker_3ee1e44fb3ae918f3ef0e442a3aa7643.bindPopup(popup_643e3796422c0539150ddc335e645042)
+        ;
+
+        
+    
+    
+            marker_3ee1e44fb3ae918f3ef0e442a3aa7643.bindTooltip(
+                `<div>
+                     Bélisle - 165.9$
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3ee1e44fb3ae918f3ef0e442a3aa7643.setIcon(div_icon_68725864b4929acbe332bbe73775a667);
+            
+    
+            var marker_5cd57ccdab018e33b33d934cd066a6d3 = L.marker(
+                [45.8189528, -73.9026502],
+                {
+}
+            ).addTo(map_a255a69abd952dfb2f4e22fa30be35f4);
+        
+    
+            var div_icon_0c59e194dbafd0b74e1bba612d2c28e4 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; color: white; background-color: #FF8C00; padding: 3px 6px; border-radius: 3px; white-space: nowrap;\"\u003e\u003cb\u003eEsso\u26fd\ufe0f\u003c/b\u003e\u003cbr\u003e165.9$\u003c/div\u003e",
+  "iconSize": [120, 40],
+  "iconAnchor": [50, -10],
+  "className": "empty",
+});
+        
+    
+        var popup_eaee4659a58e40fdbdc1a5c241022d24 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_baaad7e8b8d9f5c752606f4d0c95cf83 = $(`<div id="html_baaad7e8b8d9f5c752606f4d0c95cf83" style="width: 100.0%; height: 100.0%;"><b>Esso</b><br>Price: 165.9$<br>Location: 2400 Boulevard Ste Sophie Sainte-Sophie<br>Latitude: 45.8189528<br>Longitude: -73.9026502</div>`)[0];
+                popup_eaee4659a58e40fdbdc1a5c241022d24.setContent(html_baaad7e8b8d9f5c752606f4d0c95cf83);
+            
+        
+
+        marker_5cd57ccdab018e33b33d934cd066a6d3.bindPopup(popup_eaee4659a58e40fdbdc1a5c241022d24)
+        ;
+
+        
+    
+    
+            marker_5cd57ccdab018e33b33d934cd066a6d3.bindTooltip(
+                `<div>
+                     Esso - 165.9$
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_5cd57ccdab018e33b33d934cd066a6d3.setIcon(div_icon_0c59e194dbafd0b74e1bba612d2c28e4);
+            
+    
+            var marker_6921d70f8e426c51937d3727cfd9ddff = L.marker(
+                [45.578487, -73.8772556],
+                {
+}
+            ).addTo(map_a255a69abd952dfb2f4e22fa30be35f4);
+        
+    
+            var div_icon_6fc915fb3c56ca12f4bb277f47a6e820 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; color: white; background-color: #FF8C00; padding: 3px 6px; border-radius: 3px; white-space: nowrap;\"\u003e\u003cb\u003eShell\u26fd\ufe0f\u003c/b\u003e\u003cbr\u003e165.9$\u003c/div\u003e",
+  "iconSize": [120, 40],
+  "iconAnchor": [50, -10],
+  "className": "empty",
+});
+        
+    
+        var popup_67c132d8d0434f26f28ee3a17c1bf82a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_032c58476e4ef1053b7b4b3d68fe47ca = $(`<div id="html_032c58476e4ef1053b7b4b3d68fe47ca" style="width: 100.0%; height: 100.0%;"><b>Shell</b><br>Price: 165.9$<br>Location: 475 25e Av Saint-Eustache<br>Latitude: 45.578487<br>Longitude: -73.8772556</div>`)[0];
+                popup_67c132d8d0434f26f28ee3a17c1bf82a.setContent(html_032c58476e4ef1053b7b4b3d68fe47ca);
+            
+        
+
+        marker_6921d70f8e426c51937d3727cfd9ddff.bindPopup(popup_67c132d8d0434f26f28ee3a17c1bf82a)
+        ;
+
+        
+    
+    
+            marker_6921d70f8e426c51937d3727cfd9ddff.bindTooltip(
+                `<div>
+                     Shell - 165.9$
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6921d70f8e426c51937d3727cfd9ddff.setIcon(div_icon_6fc915fb3c56ca12f4bb277f47a6e820);
+            
+    
+            var marker_59e944035653a3a4a9f402a48b63ad23 = L.marker(
+                [46.54870690000001, -75.51163280000002],
+                {
+}
+            ).addTo(map_a255a69abd952dfb2f4e22fa30be35f4);
+        
+    
+            var div_icon_1ade8328fcc722cec1485957f5e189fc = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; color: white; background-color: #FF8C00; padding: 3px 6px; border-radius: 3px; white-space: nowrap;\"\u003e\u003cb\u003eEsso\u26fd\ufe0f\u003c/b\u003e\u003cbr\u003e165.9$\u003c/div\u003e",
+  "iconSize": [120, 40],
+  "iconAnchor": [50, -10],
+  "className": "empty",
+});
+        
+    
+        var popup_adc0bf5552e604e3f89f8c67c083a861 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d8a3a40661cc911aa1d3aced3adcffed = $(`<div id="html_d8a3a40661cc911aa1d3aced3adcffed" style="width: 100.0%; height: 100.0%;"><b>Esso</b><br>Price: 165.9$<br>Location: 136 Boulevard Albiny Paquette Mont-Laurier<br>Latitude: 46.54870690000001<br>Longitude: -75.51163280000002</div>`)[0];
+                popup_adc0bf5552e604e3f89f8c67c083a861.setContent(html_d8a3a40661cc911aa1d3aced3adcffed);
+            
+        
+
+        marker_59e944035653a3a4a9f402a48b63ad23.bindPopup(popup_adc0bf5552e604e3f89f8c67c083a861)
+        ;
+
+        
+    
+    
+            marker_59e944035653a3a4a9f402a48b63ad23.bindTooltip(
+                `<div>
+                     Esso - 165.9$
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_59e944035653a3a4a9f402a48b63ad23.setIcon(div_icon_1ade8328fcc722cec1485957f5e189fc);
+            
+    
+            var marker_54feb1bfded498c30abc47d69662d57a = L.marker(
+                [45.6415616, -74.3287501],
+                {
+}
+            ).addTo(map_a255a69abd952dfb2f4e22fa30be35f4);
+        
+    
+            var div_icon_79a3acd69ea0edbaa70bcd0b78435755 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; color: white; background-color: #FF8C00; padding: 3px 6px; border-radius: 3px; white-space: nowrap;\"\u003e\u003cb\u003eCouche-Tard\u26fd\ufe0f\u003c/b\u003e\u003cbr\u003e165.9$\u003c/div\u003e",
+  "iconSize": [120, 40],
+  "iconAnchor": [50, -10],
+  "className": "empty",
+});
+        
+    
+        var popup_1ae63481daafa2cb7116cdeaf83f6809 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9656514ff5508f1bbccd65e90604857d = $(`<div id="html_9656514ff5508f1bbccd65e90604857d" style="width: 100.0%; height: 100.0%;"><b>Couche-Tard</b><br>Price: 165.9$<br>Location: 446 Avenue Béthany Lachute<br>Latitude: 45.6415616<br>Longitude: -74.3287501</div>`)[0];
+                popup_1ae63481daafa2cb7116cdeaf83f6809.setContent(html_9656514ff5508f1bbccd65e90604857d);
+            
+        
+
+        marker_54feb1bfded498c30abc47d69662d57a.bindPopup(popup_1ae63481daafa2cb7116cdeaf83f6809)
+        ;
+
+        
+    
+    
+            marker_54feb1bfded498c30abc47d69662d57a.bindTooltip(
+                `<div>
+                     Couche-Tard - 165.9$
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_54feb1bfded498c30abc47d69662d57a.setIcon(div_icon_79a3acd69ea0edbaa70bcd0b78435755);
+            
+    
+            var marker_0cc5c80d7fef3796924b4907382723c9 = L.marker(
+                [46.0257763, -74.2148167],
+                {
+}
+            ).addTo(map_a255a69abd952dfb2f4e22fa30be35f4);
+        
+    
+            var div_icon_b7a2794492814621b442521388e09833 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; color: white; background-color: #FF8C00; padding: 3px 6px; border-radius: 3px; white-space: nowrap;\"\u003e\u003cb\u003eCouche-Tard\u26fd\ufe0f\u003c/b\u003e\u003cbr\u003e166.9$\u003c/div\u003e",
+  "iconSize": [120, 40],
+  "iconAnchor": [50, -10],
+  "className": "empty",
+});
+        
+    
+        var popup_4f2f3e7e98a35db4e093b58bfc8c5b18 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9404475e0d4e1c4021a484b79604b2ea = $(`<div id="html_9404475e0d4e1c4021a484b79604b2ea" style="width: 100.0%; height: 100.0%;"><b>Couche-Tard</b><br>Price: 166.9$<br>Location: 1349 Route 117 Val-David<br>Latitude: 46.0257763<br>Longitude: -74.2148167</div>`)[0];
+                popup_4f2f3e7e98a35db4e093b58bfc8c5b18.setContent(html_9404475e0d4e1c4021a484b79604b2ea);
+            
+        
+
+        marker_0cc5c80d7fef3796924b4907382723c9.bindPopup(popup_4f2f3e7e98a35db4e093b58bfc8c5b18)
+        ;
+
+        
+    
+    
+            marker_0cc5c80d7fef3796924b4907382723c9.bindTooltip(
+                `<div>
+                     Couche-Tard - 166.9$
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0cc5c80d7fef3796924b4907382723c9.setIcon(div_icon_b7a2794492814621b442521388e09833);
+            
+    
+            var marker_48d7c6f16a2becc270ffa00e7ed26411 = L.marker(
+                [45.6670614, -73.8710076],
+                {
+}
+            ).addTo(map_a255a69abd952dfb2f4e22fa30be35f4);
+        
+    
+            var div_icon_aa07d65847f885b8bdb04e6fff408136 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; color: white; background-color: #FF8C00; padding: 3px 6px; border-radius: 3px; white-space: nowrap;\"\u003e\u003cb\u003eEssence+ de Canadian Tire\u26fd\ufe0f\u003c/b\u003e\u003cbr\u003e167.9$\u003c/div\u003e",
+  "iconSize": [120, 40],
+  "iconAnchor": [50, -10],
+  "className": "empty",
+});
+        
+    
+        var popup_ede830025a62ac75d02cc9991328848f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4403e8d4e7179e6cbcc6e34e8884797d = $(`<div id="html_4403e8d4e7179e6cbcc6e34e8884797d" style="width: 100.0%; height: 100.0%;"><b>Essence+ de Canadian Tire</b><br>Price: 167.9$<br>Location: 50 Boul De La Seigneurie Blainville<br>Latitude: 45.6670614<br>Longitude: -73.8710076</div>`)[0];
+                popup_ede830025a62ac75d02cc9991328848f.setContent(html_4403e8d4e7179e6cbcc6e34e8884797d);
+            
+        
+
+        marker_48d7c6f16a2becc270ffa00e7ed26411.bindPopup(popup_ede830025a62ac75d02cc9991328848f)
+        ;
+
+        
+    
+    
+            marker_48d7c6f16a2becc270ffa00e7ed26411.bindTooltip(
+                `<div>
+                     Essence+ de Canadian Tire - 167.9$
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_48d7c6f16a2becc270ffa00e7ed26411.setIcon(div_icon_aa07d65847f885b8bdb04e6fff408136);
+            
+    
+            var marker_3a32c483f96dd2d612ace8db0c77f1e4 = L.marker(
+                [45.6943744, -73.9360441],
+                {
+}
+            ).addTo(map_a255a69abd952dfb2f4e22fa30be35f4);
+        
+    
+            var div_icon_46b6b2d9c65998974852f607cc5b2fee = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; color: white; background-color: #FF8C00; padding: 3px 6px; border-radius: 3px; white-space: nowrap;\"\u003e\u003cb\u003ePetro-Canada\u26fd\ufe0f\u003c/b\u003e\u003cbr\u003e167.9$\u003c/div\u003e",
+  "iconSize": [120, 40],
+  "iconAnchor": [50, -10],
+  "className": "empty",
+});
+        
+    
+        var popup_6a1cc369eed51e08cae15a812ddcd82e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1ff7c6fcd613c1d2f15d96e84fc355f3 = $(`<div id="html_1ff7c6fcd613c1d2f15d96e84fc355f3" style="width: 100.0%; height: 100.0%;"><b>Petro-Canada</b><br>Price: 167.9$<br>Location: 17505 Rue Charles Mirabel<br>Latitude: 45.6943744<br>Longitude: -73.9360441</div>`)[0];
+                popup_6a1cc369eed51e08cae15a812ddcd82e.setContent(html_1ff7c6fcd613c1d2f15d96e84fc355f3);
+            
+        
+
+        marker_3a32c483f96dd2d612ace8db0c77f1e4.bindPopup(popup_6a1cc369eed51e08cae15a812ddcd82e)
+        ;
+
+        
+    
+    
+            marker_3a32c483f96dd2d612ace8db0c77f1e4.bindTooltip(
+                `<div>
+                     Petro-Canada - 167.9$
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3a32c483f96dd2d612ace8db0c77f1e4.setIcon(div_icon_46b6b2d9c65998974852f607cc5b2fee);
+            
+    
+            var marker_1c5ce79cf451df14954d88327b4ad3fc = L.marker(
+                [46.2572152, -74.9355824],
+                {
+}
+            ).addTo(map_a255a69abd952dfb2f4e22fa30be35f4);
+        
+    
+            var div_icon_c61a943f9b02619aec623d8285bacdea = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; color: white; background-color: #FF8C00; padding: 3px 6px; border-radius: 3px; white-space: nowrap;\"\u003e\u003cb\u003eP\u00e9tro Canada (Garage Andr\u00e9 Laram\u00e9e)\u26fd\ufe0f\u003c/b\u003e\u003cbr\u003e168.9$\u003c/div\u003e",
+  "iconSize": [120, 40],
+  "iconAnchor": [50, -10],
+  "className": "empty",
+});
+        
+    
+        var popup_4c001d1aa1387f2bf950f81c0485d462 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a33adb3625c437c0450d65c617bbfa75 = $(`<div id="html_a33adb3625c437c0450d65c617bbfa75" style="width: 100.0%; height: 100.0%;"><b>Pétro Canada (Garage André Laramée)</b><br>Price: 168.9$<br>Location: 144 Chemin des Fondateurs La Minerve<br>Latitude: 46.2572152<br>Longitude: -74.9355824</div>`)[0];
+                popup_4c001d1aa1387f2bf950f81c0485d462.setContent(html_a33adb3625c437c0450d65c617bbfa75);
+            
+        
+
+        marker_1c5ce79cf451df14954d88327b4ad3fc.bindPopup(popup_4c001d1aa1387f2bf950f81c0485d462)
+        ;
+
+        
+    
+    
+            marker_1c5ce79cf451df14954d88327b4ad3fc.bindTooltip(
+                `<div>
+                     Pétro Canada (Garage André Laramée) - 168.9$
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1c5ce79cf451df14954d88327b4ad3fc.setIcon(div_icon_c61a943f9b02619aec623d8285bacdea);
+            
+    
+            var marker_ad02aabd9f715ebed1cb04d54bfd9a2a = L.marker(
+                [45.6393504, -73.811774],
+                {
+}
+            ).addTo(map_a255a69abd952dfb2f4e22fa30be35f4);
+        
+    
+            var div_icon_47a1743aeca339127c67ccb1fc6aa5de = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; color: white; background-color: #FF8C00; padding: 3px 6px; border-radius: 3px; white-space: nowrap;\"\u003e\u003cb\u003eHarnois\u26fd\ufe0f\u003c/b\u003e\u003cbr\u003e168.9$\u003c/div\u003e",
+  "iconSize": [120, 40],
+  "iconAnchor": [50, -10],
+  "className": "empty",
+});
+        
+    
+        var popup_3a638d059fc96b638c8c4ce3b56ffc89 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_18bc58d965e979b1490595c394c21ed0 = $(`<div id="html_18bc58d965e979b1490595c394c21ed0" style="width: 100.0%; height: 100.0%;"><b>Harnois</b><br>Price: 168.9$<br>Location: 255 Boul Roland-Durand Rosemère<br>Latitude: 45.6393504<br>Longitude: -73.811774</div>`)[0];
+                popup_3a638d059fc96b638c8c4ce3b56ffc89.setContent(html_18bc58d965e979b1490595c394c21ed0);
+            
+        
+
+        marker_ad02aabd9f715ebed1cb04d54bfd9a2a.bindPopup(popup_3a638d059fc96b638c8c4ce3b56ffc89)
+        ;
+
+        
+    
+    
+            marker_ad02aabd9f715ebed1cb04d54bfd9a2a.bindTooltip(
+                `<div>
+                     Harnois - 168.9$
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ad02aabd9f715ebed1cb04d54bfd9a2a.setIcon(div_icon_47a1743aeca339127c67ccb1fc6aa5de);
+            
+    
+            var marker_3bfcf870408802b1bc490e832c2f8894 = L.marker(
+                [46.28055, -74.74274199999999],
+                {
+}
+            ).addTo(map_a255a69abd952dfb2f4e22fa30be35f4);
+        
+    
+            var div_icon_3bc06376f111cff4455a8b2abe22c52a = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; color: white; background-color: #FF8C00; padding: 3px 6px; border-radius: 3px; white-space: nowrap;\"\u003e\u003cb\u003eSonic\u26fd\ufe0f\u003c/b\u003e\u003cbr\u003e168.9$\u003c/div\u003e",
+  "iconSize": [120, 40],
+  "iconAnchor": [50, -10],
+  "className": "empty",
+});
+        
+    
+        var popup_0c2d9a70c7ce7ade60a85abb4a38f872 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cea0c55d7250408cb0f48ef180a8a78c = $(`<div id="html_cea0c55d7250408cb0f48ef180a8a78c" style="width: 100.0%; height: 100.0%;"><b>Sonic</b><br>Price: 168.9$<br>Location: 8061 Boulevard du Curé Labelle Labelle<br>Latitude: 46.28055<br>Longitude: -74.74274199999999</div>`)[0];
+                popup_0c2d9a70c7ce7ade60a85abb4a38f872.setContent(html_cea0c55d7250408cb0f48ef180a8a78c);
+            
+        
+
+        marker_3bfcf870408802b1bc490e832c2f8894.bindPopup(popup_0c2d9a70c7ce7ade60a85abb4a38f872)
+        ;
+
+        
+    
+    
+            marker_3bfcf870408802b1bc490e832c2f8894.bindTooltip(
+                `<div>
+                     Sonic - 168.9$
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3bfcf870408802b1bc490e832c2f8894.setIcon(div_icon_3bc06376f111cff4455a8b2abe22c52a);
+            
+    
+            var marker_7edfc7ec15e21dff6ed1e6e72d1d9a11 = L.marker(
+                [46.55128029999999, -75.4909468],
+                {
+}
+            ).addTo(map_a255a69abd952dfb2f4e22fa30be35f4);
+        
+    
+            var div_icon_13e8826337a120feef9fa24fb12ad4b5 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; color: white; background-color: #FF8C00; padding: 3px 6px; border-radius: 3px; white-space: nowrap;\"\u003e\u003cb\u003ePetro-Canada\u26fd\ufe0f\u003c/b\u003e\u003cbr\u003e168.9$\u003c/div\u003e",
+  "iconSize": [120, 40],
+  "iconAnchor": [50, -10],
+  "className": "empty",
+});
+        
+    
+        var popup_bf9ede0c7bf3a3723376be4d3bbb622f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_653477ae639231eef6a1a9e5b612f576 = $(`<div id="html_653477ae639231eef6a1a9e5b612f576" style="width: 100.0%; height: 100.0%;"><b>Petro-Canada</b><br>Price: 168.9$<br>Location: 797 Boulevard Albiny Paquette Mont-Laurier<br>Latitude: 46.55128029999999<br>Longitude: -75.4909468</div>`)[0];
+                popup_bf9ede0c7bf3a3723376be4d3bbb622f.setContent(html_653477ae639231eef6a1a9e5b612f576);
+            
+        
+
+        marker_7edfc7ec15e21dff6ed1e6e72d1d9a11.bindPopup(popup_bf9ede0c7bf3a3723376be4d3bbb622f)
+        ;
+
+        
+    
+    
+            marker_7edfc7ec15e21dff6ed1e6e72d1d9a11.bindTooltip(
+                `<div>
+                     Petro-Canada - 168.9$
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_7edfc7ec15e21dff6ed1e6e72d1d9a11.setIcon(div_icon_13e8826337a120feef9fa24fb12ad4b5);
+            
+    
+            var marker_82b0328d5c65e5bcd8305eb74117ea87 = L.marker(
+                [46.5599246, -75.3710272],
+                {
+}
+            ).addTo(map_a255a69abd952dfb2f4e22fa30be35f4);
+        
+    
+            var div_icon_c98e8b3efec42117bc6661ac56f8d6a9 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; color: white; background-color: #FF8C00; padding: 3px 6px; border-radius: 3px; white-space: nowrap;\"\u003e\u003cb\u003ePetro-Canada\u26fd\ufe0f\u003c/b\u003e\u003cbr\u003e168.9$\u003c/div\u003e",
+  "iconSize": [120, 40],
+  "iconAnchor": [50, -10],
+  "className": "empty",
+});
+        
+    
+        var popup_62476ec55883157306c81a5aaa01278f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0f7fa4455228d0241aee77e67c768c36 = $(`<div id="html_0f7fa4455228d0241aee77e67c768c36" style="width: 100.0%; height: 100.0%;"><b>Petro-Canada</b><br>Price: 168.9$<br>Location: 524 Boulevard Saint-François Lac-des-Écorces<br>Latitude: 46.5599246<br>Longitude: -75.3710272</div>`)[0];
+                popup_62476ec55883157306c81a5aaa01278f.setContent(html_0f7fa4455228d0241aee77e67c768c36);
+            
+        
+
+        marker_82b0328d5c65e5bcd8305eb74117ea87.bindPopup(popup_62476ec55883157306c81a5aaa01278f)
+        ;
+
+        
+    
+    
+            marker_82b0328d5c65e5bcd8305eb74117ea87.bindTooltip(
+                `<div>
+                     Petro-Canada - 168.9$
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_82b0328d5c65e5bcd8305eb74117ea87.setIcon(div_icon_c98e8b3efec42117bc6661ac56f8d6a9);
+            
+    
+            var marker_8a7cfd93e0a83fb5a43d37f4afea4e74 = L.marker(
+                [46.551472, -75.481096],
+                {
+}
+            ).addTo(map_a255a69abd952dfb2f4e22fa30be35f4);
+        
+    
+            var div_icon_210e46754162dcf9a58ff8c3cc1b3c71 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; color: white; background-color: #FF8C00; padding: 3px 6px; border-radius: 3px; white-space: nowrap;\"\u003e\u003cb\u003eConstantineau \u0026 Fils inc.\u26fd\ufe0f\u003c/b\u003e\u003cbr\u003e168.9$\u003c/div\u003e",
+  "iconSize": [120, 40],
+  "iconAnchor": [50, -10],
+  "className": "empty",
+});
+        
+    
+        var popup_58f95634a424e95517cc073c0ae92e15 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_99ec280b11ef618bb54ef1d4ce47b2cc = $(`<div id="html_99ec280b11ef618bb54ef1d4ce47b2cc" style="width: 100.0%; height: 100.0%;"><b>Constantineau & Fils inc.</b><br>Price: 168.9$<br>Location: 1117 Boulevard Albiny Paquette Mont-Laurier<br>Latitude: 46.551472<br>Longitude: -75.481096</div>`)[0];
+                popup_58f95634a424e95517cc073c0ae92e15.setContent(html_99ec280b11ef618bb54ef1d4ce47b2cc);
+            
+        
+
+        marker_8a7cfd93e0a83fb5a43d37f4afea4e74.bindPopup(popup_58f95634a424e95517cc073c0ae92e15)
+        ;
+
+        
+    
+    
+            marker_8a7cfd93e0a83fb5a43d37f4afea4e74.bindTooltip(
+                `<div>
+                     Constantineau & Fils inc. - 168.9$
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_8a7cfd93e0a83fb5a43d37f4afea4e74.setIcon(div_icon_210e46754162dcf9a58ff8c3cc1b3c71);
+            
+    
+            var marker_66a6cec429f78a500d2a41719292c413 = L.marker(
+                [45.5762547, -73.892108],
+                {
+}
+            ).addTo(map_a255a69abd952dfb2f4e22fa30be35f4);
+        
+    
+            var div_icon_1cd03d515291c6739456988def69533b = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; color: white; background-color: #FF8C00; padding: 3px 6px; border-radius: 3px; white-space: nowrap;\"\u003e\u003cb\u003eUltramar\u26fd\ufe0f\u003c/b\u003e\u003cbr\u003e169.9$\u003c/div\u003e",
+  "iconSize": [120, 40],
+  "iconAnchor": [50, -10],
+  "className": "empty",
+});
+        
+    
+        var popup_bb92ed0fe208123810ca84be158bacd0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d4ac4475d9b7cece210be16528eb019c = $(`<div id="html_d4ac4475d9b7cece210be16528eb019c" style="width: 100.0%; height: 100.0%;"><b>Ultramar</b><br>Price: 169.9$<br>Location: 400 Rue Dubois Saint-Eustache<br>Latitude: 45.5762547<br>Longitude: -73.892108</div>`)[0];
+                popup_bb92ed0fe208123810ca84be158bacd0.setContent(html_d4ac4475d9b7cece210be16528eb019c);
+            
+        
+
+        marker_66a6cec429f78a500d2a41719292c413.bindPopup(popup_bb92ed0fe208123810ca84be158bacd0)
+        ;
+
+        
+    
+    
+            marker_66a6cec429f78a500d2a41719292c413.bindTooltip(
+                `<div>
+                     Ultramar - 169.9$
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_66a6cec429f78a500d2a41719292c413.setIcon(div_icon_1cd03d515291c6739456988def69533b);
+            
+    
+            var marker_2633bceeaaa991fcac0d363e5ee9daca = L.marker(
+                [45.57347009999999, -73.9147385],
+                {
+}
+            ).addTo(map_a255a69abd952dfb2f4e22fa30be35f4);
+        
+    
+            var div_icon_b826ef92a86e520a76adfed692160841 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; color: white; background-color: #FF8C00; padding: 3px 6px; border-radius: 3px; white-space: nowrap;\"\u003e\u003cb\u003ePetro-Canada\u26fd\ufe0f\u003c/b\u003e\u003cbr\u003e169.9$\u003c/div\u003e",
+  "iconSize": [120, 40],
+  "iconAnchor": [50, -10],
+  "className": "empty",
+});
+        
+    
+        var popup_c9722c19bd20dd97773c9723d5beab10 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_966b504e071a30cb1e2eec6ebe444550 = $(`<div id="html_966b504e071a30cb1e2eec6ebe444550" style="width: 100.0%; height: 100.0%;"><b>Petro-Canada</b><br>Price: 169.9$<br>Location: 550 Boulevard Arthur-Sauvé Saint-Eustache<br>Latitude: 45.57347009999999<br>Longitude: -73.9147385</div>`)[0];
+                popup_c9722c19bd20dd97773c9723d5beab10.setContent(html_966b504e071a30cb1e2eec6ebe444550);
+            
+        
+
+        marker_2633bceeaaa991fcac0d363e5ee9daca.bindPopup(popup_c9722c19bd20dd97773c9723d5beab10)
+        ;
+
+        
+    
+    
+            marker_2633bceeaaa991fcac0d363e5ee9daca.bindTooltip(
+                `<div>
+                     Petro-Canada - 169.9$
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2633bceeaaa991fcac0d363e5ee9daca.setIcon(div_icon_b826ef92a86e520a76adfed692160841);
+            
+    
+            var marker_3b97ad18c65711017074e13bbf62042b = L.marker(
+                [45.6241172, -73.7750562],
+                {
+}
+            ).addTo(map_a255a69abd952dfb2f4e22fa30be35f4);
+        
+    
+            var div_icon_1d989eebc13faa8a293ee4e2442f5881 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; color: white; background-color: #50D42F; padding: 3px 6px; border-radius: 3px; white-space: nowrap;\"\u003e\u003cb\u003eUltramar\u26fd\ufe0f\u003c/b\u003e\u003cbr\u003e162.9$\u003c/div\u003e",
+  "iconSize": [120, 40],
+  "iconAnchor": [50, -10],
+  "className": "empty",
+});
+        
+    
+        var popup_5c3bab91b3fb39b9ef35a0c1636897b5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_dc65122082ea91cdab099e29f36ae045 = $(`<div id="html_dc65122082ea91cdab099e29f36ae045" style="width: 100.0%; height: 100.0%;"><b>Ultramar</b><br>Price: 162.9$<br>Location: 2 Boulevard Sainte-Rose E Laval<br>Latitude: 45.6241172<br>Longitude: -73.7750562</div>`)[0];
+                popup_5c3bab91b3fb39b9ef35a0c1636897b5.setContent(html_dc65122082ea91cdab099e29f36ae045);
+            
+        
+
+        marker_3b97ad18c65711017074e13bbf62042b.bindPopup(popup_5c3bab91b3fb39b9ef35a0c1636897b5)
+        ;
+
+        
+    
+    
+            marker_3b97ad18c65711017074e13bbf62042b.bindTooltip(
+                `<div>
+                     Ultramar - 162.9$
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3b97ad18c65711017074e13bbf62042b.setIcon(div_icon_1d989eebc13faa8a293ee4e2442f5881);
+            
+    
+            var marker_e4ccd36d3273ee449ea98996057a3933 = L.marker(
+                [45.6020689, -73.7899709],
+                {
+}
+            ).addTo(map_a255a69abd952dfb2f4e22fa30be35f4);
+        
+    
+            var div_icon_2a814f9c64eb57878ef52935882fb7e9 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; color: white; background-color: #50D42F; padding: 3px 6px; border-radius: 3px; white-space: nowrap;\"\u003e\u003cb\u003eEsso\u26fd\ufe0f\u003c/b\u003e\u003cbr\u003e162.9$\u003c/div\u003e",
+  "iconSize": [120, 40],
+  "iconAnchor": [50, -10],
+  "className": "empty",
+});
+        
+    
+        var popup_96dd4ebabce0384a940e53fcda5e35d7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_10a41b017c07729ed41bd18d9303f502 = $(`<div id="html_10a41b017c07729ed41bd18d9303f502" style="width: 100.0%; height: 100.0%;"><b>Esso</b><br>Price: 162.9$<br>Location: 225 Boul Curé-Labelle Laval<br>Latitude: 45.6020689<br>Longitude: -73.7899709</div>`)[0];
+                popup_96dd4ebabce0384a940e53fcda5e35d7.setContent(html_10a41b017c07729ed41bd18d9303f502);
+            
+        
+
+        marker_e4ccd36d3273ee449ea98996057a3933.bindPopup(popup_96dd4ebabce0384a940e53fcda5e35d7)
+        ;
+
+        
+    
+    
+            marker_e4ccd36d3273ee449ea98996057a3933.bindTooltip(
+                `<div>
+                     Esso - 162.9$
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e4ccd36d3273ee449ea98996057a3933.setIcon(div_icon_2a814f9c64eb57878ef52935882fb7e9);
+            
+    
+            var marker_fe129bd438d9999de2883198cbbb328c = L.marker(
+                [45.5587762, -73.7276936],
+                {
+}
+            ).addTo(map_a255a69abd952dfb2f4e22fa30be35f4);
+        
+    
+            var div_icon_ce771824f5bd5630d92df850c78087a6 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; color: white; background-color: #50D42F; padding: 3px 6px; border-radius: 3px; white-space: nowrap;\"\u003e\u003cb\u003eEssence+ de Canadian Tire\u26fd\ufe0f\u003c/b\u003e\u003cbr\u003e164.9$\u003c/div\u003e",
+  "iconSize": [120, 40],
+  "iconAnchor": [50, -10],
+  "className": "empty",
+});
+        
+    
+        var popup_e6e2748f6193fe661bc587c903624fea = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_50c0dce5edf95edcdb41219dbb926a6f = $(`<div id="html_50c0dce5edf95edcdb41219dbb926a6f" style="width: 100.0%; height: 100.0%;"><b>Essence+ de Canadian Tire</b><br>Price: 164.9$<br>Location: 1450 Boulevard Le Corbusier Laval<br>Latitude: 45.5587762<br>Longitude: -73.7276936</div>`)[0];
+                popup_e6e2748f6193fe661bc587c903624fea.setContent(html_50c0dce5edf95edcdb41219dbb926a6f);
+            
+        
+
+        marker_fe129bd438d9999de2883198cbbb328c.bindPopup(popup_e6e2748f6193fe661bc587c903624fea)
+        ;
+
+        
+    
+    
+            marker_fe129bd438d9999de2883198cbbb328c.bindTooltip(
+                `<div>
+                     Essence+ de Canadian Tire - 164.9$
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_fe129bd438d9999de2883198cbbb328c.setIcon(div_icon_ce771824f5bd5630d92df850c78087a6);
+            
+    
+            var marker_75b7c4e29c01586d69d29529c0230aa5 = L.marker(
+                [45.5740972, -73.75720439999999],
+                {
+}
+            ).addTo(map_a255a69abd952dfb2f4e22fa30be35f4);
+        
+    
+            var div_icon_cb30d02ad85ccf64ab85d1106a31d418 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; color: white; background-color: #FF8C00; padding: 3px 6px; border-radius: 3px; white-space: nowrap;\"\u003e\u003cb\u003eCostco\u26fd\ufe0f\u003c/b\u003e\u003cbr\u003e166.9$\u003c/div\u003e",
+  "iconSize": [120, 40],
+  "iconAnchor": [50, -10],
+  "className": "empty",
+});
+        
+    
+        var popup_0f91b86c23493c6ecc1f46ceae78bdd3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0d14df73a81d5b2897c719489d6ad944 = $(`<div id="html_0d14df73a81d5b2897c719489d6ad944" style="width: 100.0%; height: 100.0%;"><b>Costco</b><br>Price: 166.9$<br>Location: 2999 Autoroute Laval 440 Ouest Laval<br>Latitude: 45.5740972<br>Longitude: -73.75720439999999</div>`)[0];
+                popup_0f91b86c23493c6ecc1f46ceae78bdd3.setContent(html_0d14df73a81d5b2897c719489d6ad944);
+            
+        
+
+        marker_75b7c4e29c01586d69d29529c0230aa5.bindPopup(popup_0f91b86c23493c6ecc1f46ceae78bdd3)
+        ;
+
+        
+    
+    
+            marker_75b7c4e29c01586d69d29529c0230aa5.bindTooltip(
+                `<div>
+                     Costco - 166.9$
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_75b7c4e29c01586d69d29529c0230aa5.setIcon(div_icon_cb30d02ad85ccf64ab85d1106a31d418);
+            
+    
+            var marker_79b262743efa76237a4c24805cb20b51 = L.marker(
+                [45.5685987, -73.83571069999999],
+                {
+}
+            ).addTo(map_a255a69abd952dfb2f4e22fa30be35f4);
+        
+    
+            var div_icon_6fff830e4a6f8b3c0e9e27774d7ed6b1 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; color: white; background-color: #FF8C00; padding: 3px 6px; border-radius: 3px; white-space: nowrap;\"\u003e\u003cb\u003eP\u00e9tro Canada\u26fd\ufe0f\u003c/b\u003e\u003cbr\u003e167.8$\u003c/div\u003e",
+  "iconSize": [120, 40],
+  "iconAnchor": [50, -10],
+  "className": "empty",
+});
+        
+    
+        var popup_76230c78d827903ac9ffd35fd4cb2caf = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_abd40d06aab284a97a7c447299809efb = $(`<div id="html_abd40d06aab284a97a7c447299809efb" style="width: 100.0%; height: 100.0%;"><b>Pétro Canada</b><br>Price: 167.8$<br>Location: 4124 Boulevard Sainte-Rose Laval<br>Latitude: 45.5685987<br>Longitude: -73.83571069999999</div>`)[0];
+                popup_76230c78d827903ac9ffd35fd4cb2caf.setContent(html_abd40d06aab284a97a7c447299809efb);
+            
+        
+
+        marker_79b262743efa76237a4c24805cb20b51.bindPopup(popup_76230c78d827903ac9ffd35fd4cb2caf)
+        ;
+
+        
+    
+    
+            marker_79b262743efa76237a4c24805cb20b51.bindTooltip(
+                `<div>
+                     Pétro Canada - 167.8$
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_79b262743efa76237a4c24805cb20b51.setIcon(div_icon_6fff830e4a6f8b3c0e9e27774d7ed6b1);
+            
+    
+            var marker_81c2b79976aafb2f89d977a77c4b1365 = L.marker(
+                [45.5653584, -73.70197639999999],
+                {
+}
+            ).addTo(map_a255a69abd952dfb2f4e22fa30be35f4);
+        
+    
+            var div_icon_cc3cae91182d21331d4e3c1ac2b22cec = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; color: white; background-color: #FF8C00; padding: 3px 6px; border-radius: 3px; white-space: nowrap;\"\u003e\u003cb\u003eEsso\u26fd\ufe0f\u003c/b\u003e\u003cbr\u003e169.9$\u003c/div\u003e",
+  "iconSize": [120, 40],
+  "iconAnchor": [50, -10],
+  "className": "empty",
+});
+        
+    
+        var popup_5cf12cfff6138de6da0a951dd44cd788 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ede03bf97febb3641721859967a9b086 = $(`<div id="html_ede03bf97febb3641721859967a9b086" style="width: 100.0%; height: 100.0%;"><b>Esso</b><br>Price: 169.9$<br>Location: 305 Boulevard de la Concorde O Laval<br>Latitude: 45.5653584<br>Longitude: -73.70197639999999</div>`)[0];
+                popup_5cf12cfff6138de6da0a951dd44cd788.setContent(html_ede03bf97febb3641721859967a9b086);
+            
+        
+
+        marker_81c2b79976aafb2f89d977a77c4b1365.bindPopup(popup_5cf12cfff6138de6da0a951dd44cd788)
+        ;
+
+        
+    
+    
+            marker_81c2b79976aafb2f89d977a77c4b1365.bindTooltip(
+                `<div>
+                     Esso - 169.9$
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_81c2b79976aafb2f89d977a77c4b1365.setIcon(div_icon_cc3cae91182d21331d4e3c1ac2b22cec);
+            
+    
+            var marker_db8a943af6783e1c84d72e80ea7300b2 = L.marker(
+                [45.5795352, -73.7977141],
+                {
+}
+            ).addTo(map_a255a69abd952dfb2f4e22fa30be35f4);
+        
+    
+            var div_icon_402658afb8eb54772362889e7bab8049 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; color: white; background-color: #FF8C00; padding: 3px 6px; border-radius: 3px; white-space: nowrap;\"\u003e\u003cb\u003ePetro-Canada\u26fd\ufe0f\u003c/b\u003e\u003cbr\u003e169.9$\u003c/div\u003e",
+  "iconSize": [120, 40],
+  "iconAnchor": [50, -10],
+  "className": "empty",
+});
+        
+    
+        var popup_77f4b2641304ff4c8f58e709f71d69f1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_86d0b98817208d8e9e28cb5028aa6951 = $(`<div id="html_86d0b98817208d8e9e28cb5028aa6951" style="width: 100.0%; height: 100.0%;"><b>Petro-Canada</b><br>Price: 169.9$<br>Location: 3163 Boulevard Dagenais O Laval<br>Latitude: 45.5795352<br>Longitude: -73.7977141</div>`)[0];
+                popup_77f4b2641304ff4c8f58e709f71d69f1.setContent(html_86d0b98817208d8e9e28cb5028aa6951);
+            
+        
+
+        marker_db8a943af6783e1c84d72e80ea7300b2.bindPopup(popup_77f4b2641304ff4c8f58e709f71d69f1)
+        ;
+
+        
+    
+    
+            marker_db8a943af6783e1c84d72e80ea7300b2.bindTooltip(
+                `<div>
+                     Petro-Canada - 169.9$
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_db8a943af6783e1c84d72e80ea7300b2.setIcon(div_icon_402658afb8eb54772362889e7bab8049);
+            
+    
+            var marker_a64766108a6358fdc662ff7347444355 = L.marker(
+                [45.5372237, -73.7403609],
+                {
+}
+            ).addTo(map_a255a69abd952dfb2f4e22fa30be35f4);
+        
+    
+            var div_icon_cd5f3c6ea1f8fe263932529296fef185 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; color: white; background-color: #FF8C00; padding: 3px 6px; border-radius: 3px; white-space: nowrap;\"\u003e\u003cb\u003eCanadian Tire\u26fd\ufe0f\u003c/b\u003e\u003cbr\u003e170$\u003c/div\u003e",
+  "iconSize": [120, 40],
+  "iconAnchor": [50, -10],
+  "className": "empty",
+});
+        
+    
+        var popup_d10b819de435657083420310cd6d1003 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f02e80677871ca1513428195594429b0 = $(`<div id="html_f02e80677871ca1513428195594429b0" style="width: 100.0%; height: 100.0%;"><b>Canadian Tire</b><br>Price: 170$<br>Location: 574 Blvd Curé-Labelle Laval<br>Latitude: 45.5372237<br>Longitude: -73.7403609</div>`)[0];
+                popup_d10b819de435657083420310cd6d1003.setContent(html_f02e80677871ca1513428195594429b0);
+            
+        
+
+        marker_a64766108a6358fdc662ff7347444355.bindPopup(popup_d10b819de435657083420310cd6d1003)
+        ;
+
+        
+    
+    
+            marker_a64766108a6358fdc662ff7347444355.bindTooltip(
+                `<div>
+                     Canadian Tire - 170$
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a64766108a6358fdc662ff7347444355.setIcon(div_icon_cd5f3c6ea1f8fe263932529296fef185);
+            
+    
+            var marker_92e0bd05f90633b9b4b21d522b3210bd = L.marker(
+                [45.5800117, -73.7882497],
+                {
+}
+            ).addTo(map_a255a69abd952dfb2f4e22fa30be35f4);
+        
+    
+            var div_icon_d399e9889175fcd31271c1f74fd38d0b = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; color: white; background-color: #FF8C00; padding: 3px 6px; border-radius: 3px; white-space: nowrap;\"\u003e\u003cb\u003eShell\u26fd\ufe0f\u003c/b\u003e\u003cbr\u003e171.9$\u003c/div\u003e",
+  "iconSize": [120, 40],
+  "iconAnchor": [50, -10],
+  "className": "empty",
+});
+        
+    
+        var popup_f9ec4a15a5e45437f4b8c78bd7b57683 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b5da9e5fc6d0717ac719ec4b2030c94e = $(`<div id="html_b5da9e5fc6d0717ac719ec4b2030c94e" style="width: 100.0%; height: 100.0%;"><b>Shell</b><br>Price: 171.9$<br>Location: 480 Boulevard Curé-Labelle Laval<br>Latitude: 45.5800117<br>Longitude: -73.7882497</div>`)[0];
+                popup_f9ec4a15a5e45437f4b8c78bd7b57683.setContent(html_b5da9e5fc6d0717ac719ec4b2030c94e);
+            
+        
+
+        marker_92e0bd05f90633b9b4b21d522b3210bd.bindPopup(popup_f9ec4a15a5e45437f4b8c78bd7b57683)
+        ;
+
+        
+    
+    
+            marker_92e0bd05f90633b9b4b21d522b3210bd.bindTooltip(
+                `<div>
+                     Shell - 171.9$
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_92e0bd05f90633b9b4b21d522b3210bd.setIcon(div_icon_d399e9889175fcd31271c1f74fd38d0b);
+            
+    
+            var marker_731924b1f86e6bededf3e7f9e4041c64 = L.marker(
+                [45.5720892, -73.8206058],
+                {
+}
+            ).addTo(map_a255a69abd952dfb2f4e22fa30be35f4);
+        
+    
+            var div_icon_f9de1191738a2843e09d693d5a998009 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; color: white; background-color: #FF8C00; padding: 3px 6px; border-radius: 3px; white-space: nowrap;\"\u003e\u003cb\u003eShell\u26fd\ufe0f\u003c/b\u003e\u003cbr\u003e171.9$\u003c/div\u003e",
+  "iconSize": [120, 40],
+  "iconAnchor": [50, -10],
+  "className": "empty",
+});
+        
+    
+        var popup_3e22569d9f6bc90d61d57a99dce50fa1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_793bc156270937e218d07bd15430b776 = $(`<div id="html_793bc156270937e218d07bd15430b776" style="width: 100.0%; height: 100.0%;"><b>Shell</b><br>Price: 171.9$<br>Location: 3785 Boulevard Dagenais O Laval<br>Latitude: 45.5720892<br>Longitude: -73.8206058</div>`)[0];
+                popup_3e22569d9f6bc90d61d57a99dce50fa1.setContent(html_793bc156270937e218d07bd15430b776);
+            
+        
+
+        marker_731924b1f86e6bededf3e7f9e4041c64.bindPopup(popup_3e22569d9f6bc90d61d57a99dce50fa1)
+        ;
+
+        
+    
+    
+            marker_731924b1f86e6bededf3e7f9e4041c64.bindTooltip(
+                `<div>
+                     Shell - 171.9$
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_731924b1f86e6bededf3e7f9e4041c64.setIcon(div_icon_f9de1191738a2843e09d693d5a998009);
+            
+    
+            var marker_3ea9ee348d4c64368089aa8f4442eb0b = L.marker(
+                [45.5486611, -73.7572947],
+                {
+}
+            ).addTo(map_a255a69abd952dfb2f4e22fa30be35f4);
+        
+    
+            var div_icon_5beb016ed4ff90d032402a3f2bc54a6a = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; color: white; background-color: #FF8C00; padding: 3px 6px; border-radius: 3px; white-space: nowrap;\"\u003e\u003cb\u003ePetro-Canada\u26fd\ufe0f\u003c/b\u003e\u003cbr\u003e172.8$\u003c/div\u003e",
+  "iconSize": [120, 40],
+  "iconAnchor": [50, -10],
+  "className": "empty",
+});
+        
+    
+        var popup_2c855283c9ac3b44a2d5d7e333d050e2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a2dfddc0e65d4e1963881de59c959d79 = $(`<div id="html_a2dfddc0e65d4e1963881de59c959d79" style="width: 100.0%; height: 100.0%;"><b>Petro-Canada</b><br>Price: 172.8$<br>Location: 1498 Boulevard Curé-Labelle Laval<br>Latitude: 45.5486611<br>Longitude: -73.7572947</div>`)[0];
+                popup_2c855283c9ac3b44a2d5d7e333d050e2.setContent(html_a2dfddc0e65d4e1963881de59c959d79);
+            
+        
+
+        marker_3ea9ee348d4c64368089aa8f4442eb0b.bindPopup(popup_2c855283c9ac3b44a2d5d7e333d050e2)
+        ;
+
+        
+    
+    
+            marker_3ea9ee348d4c64368089aa8f4442eb0b.bindTooltip(
+                `<div>
+                     Petro-Canada - 172.8$
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3ea9ee348d4c64368089aa8f4442eb0b.setIcon(div_icon_5beb016ed4ff90d032402a3f2bc54a6a);
+            
+    
+            var marker_1bf10571a60f614a30e130a757c9c8b3 = L.marker(
+                [45.6052801, -73.7910015],
+                {
+}
+            ).addTo(map_a255a69abd952dfb2f4e22fa30be35f4);
+        
+    
+            var div_icon_30c64f5b1b59d84b61ad5fd751f63ec4 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; color: white; background-color: #FF8C00; padding: 3px 6px; border-radius: 3px; white-space: nowrap;\"\u003e\u003cb\u003eShell\u26fd\ufe0f\u003c/b\u003e\u003cbr\u003e172.9$\u003c/div\u003e",
+  "iconSize": [120, 40],
+  "iconAnchor": [50, -10],
+  "className": "empty",
+});
+        
+    
+        var popup_95329f150b8e61621e780ab1d7b51b76 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_281449f1a47a61dbdbdcdc4c4449ca71 = $(`<div id="html_281449f1a47a61dbdbdcdc4c4449ca71" style="width: 100.0%; height: 100.0%;"><b>Shell</b><br>Price: 172.9$<br>Location: 185 Boul. Curé-Labelle Laval<br>Latitude: 45.6052801<br>Longitude: -73.7910015</div>`)[0];
+                popup_95329f150b8e61621e780ab1d7b51b76.setContent(html_281449f1a47a61dbdbdcdc4c4449ca71);
+            
+        
+
+        marker_1bf10571a60f614a30e130a757c9c8b3.bindPopup(popup_95329f150b8e61621e780ab1d7b51b76)
+        ;
+
+        
+    
+    
+            marker_1bf10571a60f614a30e130a757c9c8b3.bindTooltip(
+                `<div>
+                     Shell - 172.9$
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1bf10571a60f614a30e130a757c9c8b3.setIcon(div_icon_30c64f5b1b59d84b61ad5fd751f63ec4);
+            
+    
+            var marker_caf7a06bfa31e643345b952e0cf32c1d = L.marker(
+                [45.5796768, -73.8044209],
+                {
+}
+            ).addTo(map_a255a69abd952dfb2f4e22fa30be35f4);
+        
+    
+            var div_icon_4943805d54b02fb069582d456897a496 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; color: white; background-color: #FF8C00; padding: 3px 6px; border-radius: 3px; white-space: nowrap;\"\u003e\u003cb\u003eAutomation 2000\u26fd\ufe0f\u003c/b\u003e\u003cbr\u003e174.4$\u003c/div\u003e",
+  "iconSize": [120, 40],
+  "iconAnchor": [50, -10],
+  "className": "empty",
+});
+        
+    
+        var popup_c4570067ba629d473d69af55cbb048a1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_dc5403832bb698cba84294517948afdb = $(`<div id="html_dc5403832bb698cba84294517948afdb" style="width: 100.0%; height: 100.0%;"><b>Automation 2000</b><br>Price: 174.4$<br>Location: 3345 Boulevard Dagenais O Laval<br>Latitude: 45.5796768<br>Longitude: -73.8044209</div>`)[0];
+                popup_c4570067ba629d473d69af55cbb048a1.setContent(html_dc5403832bb698cba84294517948afdb);
+            
+        
+
+        marker_caf7a06bfa31e643345b952e0cf32c1d.bindPopup(popup_c4570067ba629d473d69af55cbb048a1)
+        ;
+
+        
+    
+    
+            marker_caf7a06bfa31e643345b952e0cf32c1d.bindTooltip(
+                `<div>
+                     Automation 2000 - 174.4$
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_caf7a06bfa31e643345b952e0cf32c1d.setIcon(div_icon_4943805d54b02fb069582d456897a496);
+            
+    
+            var marker_9c55d5219c4c3a687c82e5a9dbc49620 = L.marker(
+                [45.5266205, -73.76930089999999],
+                {
+}
+            ).addTo(map_a255a69abd952dfb2f4e22fa30be35f4);
+        
+    
+            var div_icon_19ccbb162a879d55d6c39e016e092bfd = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; color: white; background-color: #FF8C00; padding: 3px 6px; border-radius: 3px; white-space: nowrap;\"\u003e\u003cb\u003eUltramar\u26fd\ufe0f\u003c/b\u003e\u003cbr\u003e174.9$\u003c/div\u003e",
+  "iconSize": [120, 40],
+  "iconAnchor": [50, -10],
+  "className": "empty",
+});
+        
+    
+        var popup_36084504dad9ce6b9539ff7970fba25a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a4520166bddd65bd80261d73d110bebe = $(`<div id="html_a4520166bddd65bd80261d73d110bebe" style="width: 100.0%; height: 100.0%;"><b>Ultramar</b><br>Price: 174.9$<br>Location: 5047 Boulevard Samson Laval<br>Latitude: 45.5266205<br>Longitude: -73.76930089999999</div>`)[0];
+                popup_36084504dad9ce6b9539ff7970fba25a.setContent(html_a4520166bddd65bd80261d73d110bebe);
+            
+        
+
+        marker_9c55d5219c4c3a687c82e5a9dbc49620.bindPopup(popup_36084504dad9ce6b9539ff7970fba25a)
+        ;
+
+        
+    
+    
+            marker_9c55d5219c4c3a687c82e5a9dbc49620.bindTooltip(
+                `<div>
+                     Ultramar - 174.9$
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9c55d5219c4c3a687c82e5a9dbc49620.setIcon(div_icon_19ccbb162a879d55d6c39e016e092bfd);
+            
+    
+            var marker_07e11e28b6d7fd1fe7255edd2ac9bbc8 = L.marker(
+                [45.61032520000001, -73.7367043],
+                {
+}
+            ).addTo(map_a255a69abd952dfb2f4e22fa30be35f4);
+        
+    
+            var div_icon_c4efc2b0fdee6bff5bfaae9fb6900303 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; color: white; background-color: #EE0E0E; padding: 3px 6px; border-radius: 3px; white-space: nowrap;\"\u003e\u003cb\u003eEsso\u26fd\ufe0f\u003c/b\u003e\u003cbr\u003e175.9$\u003c/div\u003e",
+  "iconSize": [120, 40],
+  "iconAnchor": [50, -10],
+  "className": "empty",
+});
+        
+    
+        var popup_7b5fcffc2919cc0ea90d698bcb82ceba = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_df5453ece19029fbd98455894416b8fc = $(`<div id="html_df5453ece19029fbd98455894416b8fc" style="width: 100.0%; height: 100.0%;"><b>Esso</b><br>Price: 175.9$<br>Location: 2170 Boulevard des Laurentides Vimont<br>Latitude: 45.61032520000001<br>Longitude: -73.7367043</div>`)[0];
+                popup_7b5fcffc2919cc0ea90d698bcb82ceba.setContent(html_df5453ece19029fbd98455894416b8fc);
+            
+        
+
+        marker_07e11e28b6d7fd1fe7255edd2ac9bbc8.bindPopup(popup_7b5fcffc2919cc0ea90d698bcb82ceba)
+        ;
+
+        
+    
+    
+            marker_07e11e28b6d7fd1fe7255edd2ac9bbc8.bindTooltip(
+                `<div>
+                     Esso - 175.9$
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_07e11e28b6d7fd1fe7255edd2ac9bbc8.setIcon(div_icon_c4efc2b0fdee6bff5bfaae9fb6900303);
+            
+    
+            var marker_f3a9db996155f49fb026421927b2a5f5 = L.marker(
+                [45.5974887, -73.72290339999999],
+                {
+}
+            ).addTo(map_a255a69abd952dfb2f4e22fa30be35f4);
+        
+    
+            var div_icon_292199e07041bbb9f971311f0cc2bc25 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; color: white; background-color: #EE0E0E; padding: 3px 6px; border-radius: 3px; white-space: nowrap;\"\u003e\u003cb\u003eUltramar\u26fd\ufe0f\u003c/b\u003e\u003cbr\u003e175.9$\u003c/div\u003e",
+  "iconSize": [120, 40],
+  "iconAnchor": [50, -10],
+  "className": "empty",
+});
+        
+    
+        var popup_6cf16890ab737ddfffcffc20740e3cc4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_83170847943b4d2954559e2021da16a4 = $(`<div id="html_83170847943b4d2954559e2021da16a4" style="width: 100.0%; height: 100.0%;"><b>Ultramar</b><br>Price: 175.9$<br>Location: 1716 Boul des Laurentides Laval<br>Latitude: 45.5974887<br>Longitude: -73.72290339999999</div>`)[0];
+                popup_6cf16890ab737ddfffcffc20740e3cc4.setContent(html_83170847943b4d2954559e2021da16a4);
+            
+        
+
+        marker_f3a9db996155f49fb026421927b2a5f5.bindPopup(popup_6cf16890ab737ddfffcffc20740e3cc4)
+        ;
+
+        
+    
+    
+            marker_f3a9db996155f49fb026421927b2a5f5.bindTooltip(
+                `<div>
+                     Ultramar - 175.9$
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f3a9db996155f49fb026421927b2a5f5.setIcon(div_icon_292199e07041bbb9f971311f0cc2bc25);
+            
+    
+            var marker_94bc87785fd34dbef8887f73a9cbc8c0 = L.marker(
+                [45.5820583, -73.7318595],
+                {
+}
+            ).addTo(map_a255a69abd952dfb2f4e22fa30be35f4);
+        
+    
+            var div_icon_08e7adb30fa04775bc85d98c0c61c321 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; color: white; background-color: #EE0E0E; padding: 3px 6px; border-radius: 3px; white-space: nowrap;\"\u003e\u003cb\u003eUltramar\u26fd\ufe0f\u003c/b\u003e\u003cbr\u003e175.9$\u003c/div\u003e",
+  "iconSize": [120, 40],
+  "iconAnchor": [50, -10],
+  "className": "empty",
+});
+        
+    
+        var popup_942680b9a988677c93497d6962469d5b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c1d89d8d1643c1b5a479eb64385474be = $(`<div id="html_c1d89d8d1643c1b5a479eb64385474be" style="width: 100.0%; height: 100.0%;"><b>Ultramar</b><br>Price: 175.9$<br>Location: 2305 Boul Industriel Laval<br>Latitude: 45.5820583<br>Longitude: -73.7318595</div>`)[0];
+                popup_942680b9a988677c93497d6962469d5b.setContent(html_c1d89d8d1643c1b5a479eb64385474be);
+            
+        
+
+        marker_94bc87785fd34dbef8887f73a9cbc8c0.bindPopup(popup_942680b9a988677c93497d6962469d5b)
+        ;
+
+        
+    
+    
+            marker_94bc87785fd34dbef8887f73a9cbc8c0.bindTooltip(
+                `<div>
+                     Ultramar - 175.9$
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_94bc87785fd34dbef8887f73a9cbc8c0.setIcon(div_icon_08e7adb30fa04775bc85d98c0c61c321);
+            
+    
+            var marker_b47214df475d853449a8abc1e85cce40 = L.marker(
+                [45.6069422, -73.7914574],
+                {
+}
+            ).addTo(map_a255a69abd952dfb2f4e22fa30be35f4);
+        
+    
+            var div_icon_ce75353ec77f3cda1edfcfc4b17def5e = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; color: white; background-color: #EE0E0E; padding: 3px 6px; border-radius: 3px; white-space: nowrap;\"\u003e\u003cb\u003eEsso\u26fd\ufe0f\u003c/b\u003e\u003cbr\u003e175.9$\u003c/div\u003e",
+  "iconSize": [120, 40],
+  "iconAnchor": [50, -10],
+  "className": "empty",
+});
+        
+    
+        var popup_252c19b59d6a0d69cb5d145b55ee40ce = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c9b984890089433440d27a1d4f356e4a = $(`<div id="html_c9b984890089433440d27a1d4f356e4a" style="width: 100.0%; height: 100.0%;"><b>Esso</b><br>Price: 175.9$<br>Location: 165 Boulevard Curé-Labelle Laval<br>Latitude: 45.6069422<br>Longitude: -73.7914574</div>`)[0];
+                popup_252c19b59d6a0d69cb5d145b55ee40ce.setContent(html_c9b984890089433440d27a1d4f356e4a);
+            
+        
+
+        marker_b47214df475d853449a8abc1e85cce40.bindPopup(popup_252c19b59d6a0d69cb5d145b55ee40ce)
+        ;
+
+        
+    
+    
+            marker_b47214df475d853449a8abc1e85cce40.bindTooltip(
+                `<div>
+                     Esso - 175.9$
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b47214df475d853449a8abc1e85cce40.setIcon(div_icon_ce75353ec77f3cda1edfcfc4b17def5e);
+            
+    
+            var marker_e3cd4817859f15187bb0ff5c9c0c51b5 = L.marker(
+                [45.5701168, -73.6920785],
+                {
+}
+            ).addTo(map_a255a69abd952dfb2f4e22fa30be35f4);
+        
+    
+            var div_icon_13e387bf6b7cb78fd161038d6a556937 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; color: white; background-color: #EE0E0E; padding: 3px 6px; border-radius: 3px; white-space: nowrap;\"\u003e\u003cb\u003ePetro-Canada\u26fd\ufe0f\u003c/b\u003e\u003cbr\u003e176.9$\u003c/div\u003e",
+  "iconSize": [120, 40],
+  "iconAnchor": [50, -10],
+  "className": "empty",
+});
+        
+    
+        var popup_ac4581b78085bba0ca5e99f22216d93e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_07c8af7fbf2ff58c4306b52ff57be787 = $(`<div id="html_07c8af7fbf2ff58c4306b52ff57be787" style="width: 100.0%; height: 100.0%;"><b>Petro-Canada</b><br>Price: 176.9$<br>Location: 500 Boulevard des Laurentides Laval<br>Latitude: 45.5701168<br>Longitude: -73.6920785</div>`)[0];
+                popup_ac4581b78085bba0ca5e99f22216d93e.setContent(html_07c8af7fbf2ff58c4306b52ff57be787);
+            
+        
+
+        marker_e3cd4817859f15187bb0ff5c9c0c51b5.bindPopup(popup_ac4581b78085bba0ca5e99f22216d93e)
+        ;
+
+        
+    
+    
+            marker_e3cd4817859f15187bb0ff5c9c0c51b5.bindTooltip(
+                `<div>
+                     Petro-Canada - 176.9$
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e3cd4817859f15187bb0ff5c9c0c51b5.setIcon(div_icon_13e387bf6b7cb78fd161038d6a556937);
+            
+    
+            var marker_d241904911f5589fc7ed6baed69763a0 = L.marker(
+                [45.5587293, -73.79153269999999],
+                {
+}
+            ).addTo(map_a255a69abd952dfb2f4e22fa30be35f4);
+        
+    
+            var div_icon_9415b033a8889946de6369e60e290ae2 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; color: white; background-color: #EE0E0E; padding: 3px 6px; border-radius: 3px; white-space: nowrap;\"\u003e\u003cb\u003eEsso\u26fd\ufe0f\u003c/b\u003e\u003cbr\u003e176.9$\u003c/div\u003e",
+  "iconSize": [120, 40],
+  "iconAnchor": [50, -10],
+  "className": "empty",
+});
+        
+    
+        var popup_deabf58aaebeb32529ed0fbe86d7a15d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_275c8fcdffa660c6a45ef51c9ef105e9 = $(`<div id="html_275c8fcdffa660c6a45ef51c9ef105e9" style="width: 100.0%; height: 100.0%;"><b>Esso</b><br>Price: 176.9$<br>Location: 4600 Autoroute 440 Laval<br>Latitude: 45.5587293<br>Longitude: -73.79153269999999</div>`)[0];
+                popup_deabf58aaebeb32529ed0fbe86d7a15d.setContent(html_275c8fcdffa660c6a45ef51c9ef105e9);
+            
+        
+
+        marker_d241904911f5589fc7ed6baed69763a0.bindPopup(popup_deabf58aaebeb32529ed0fbe86d7a15d)
+        ;
+
+        
+    
+    
+            marker_d241904911f5589fc7ed6baed69763a0.bindTooltip(
+                `<div>
+                     Esso - 176.9$
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d241904911f5589fc7ed6baed69763a0.setIcon(div_icon_9415b033a8889946de6369e60e290ae2);
+            
+    
+            var marker_ef06fbeac25aee0dfec8b058d6a8bfa7 = L.marker(
+                [45.57104, -73.82076599999999],
+                {
+}
+            ).addTo(map_a255a69abd952dfb2f4e22fa30be35f4);
+        
+    
+            var div_icon_0754cc9fdfbbb7bea56169cc8a8f2490 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; color: white; background-color: #EE0E0E; padding: 3px 6px; border-radius: 3px; white-space: nowrap;\"\u003e\u003cb\u003eCouche-Tard\u26fd\ufe0f\u003c/b\u003e\u003cbr\u003e177.9$\u003c/div\u003e",
+  "iconSize": [120, 40],
+  "iconAnchor": [50, -10],
+  "className": "empty",
+});
+        
+    
+        var popup_818824e2064fabb8e0fdab5d1e46e0b9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_958b591d8fa99848c4f04f34bb297110 = $(`<div id="html_958b591d8fa99848c4f04f34bb297110" style="width: 100.0%; height: 100.0%;"><b>Couche-Tard</b><br>Price: 177.9$<br>Location: 3800 Boulevard Dagenais O Laval<br>Latitude: 45.57104<br>Longitude: -73.82076599999999</div>`)[0];
+                popup_818824e2064fabb8e0fdab5d1e46e0b9.setContent(html_958b591d8fa99848c4f04f34bb297110);
+            
+        
+
+        marker_ef06fbeac25aee0dfec8b058d6a8bfa7.bindPopup(popup_818824e2064fabb8e0fdab5d1e46e0b9)
+        ;
+
+        
+    
+    
+            marker_ef06fbeac25aee0dfec8b058d6a8bfa7.bindTooltip(
+                `<div>
+                     Couche-Tard - 177.9$
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ef06fbeac25aee0dfec8b058d6a8bfa7.setIcon(div_icon_0754cc9fdfbbb7bea56169cc8a8f2490);
+            
+    
+            var marker_c2186f3f4baa9cc426e15b499f62c445 = L.marker(
+                [45.5921355, -73.7862971],
+                {
+}
+            ).addTo(map_a255a69abd952dfb2f4e22fa30be35f4);
+        
+    
+            var div_icon_a2c7af98fb97298cf3258a633211f55f = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; color: white; background-color: #EE0E0E; padding: 3px 6px; border-radius: 3px; white-space: nowrap;\"\u003e\u003cb\u003eShell\u26fd\ufe0f\u003c/b\u003e\u003cbr\u003e178.9$\u003c/div\u003e",
+  "iconSize": [120, 40],
+  "iconAnchor": [50, -10],
+  "className": "empty",
+});
+        
+    
+        var popup_6fa7e0458aed5d1dad67b4fdd3b42915 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5f3ab2572924a124c3db7ff3ef745e02 = $(`<div id="html_5f3ab2572924a124c3db7ff3ef745e02" style="width: 100.0%; height: 100.0%;"><b>Shell</b><br>Price: 178.9$<br>Location: 508 Boulevard Curé-Labelle Laval<br>Latitude: 45.5921355<br>Longitude: -73.7862971</div>`)[0];
+                popup_6fa7e0458aed5d1dad67b4fdd3b42915.setContent(html_5f3ab2572924a124c3db7ff3ef745e02);
+            
+        
+
+        marker_c2186f3f4baa9cc426e15b499f62c445.bindPopup(popup_6fa7e0458aed5d1dad67b4fdd3b42915)
+        ;
+
+        
+    
+    
+            marker_c2186f3f4baa9cc426e15b499f62c445.bindTooltip(
+                `<div>
+                     Shell - 178.9$
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c2186f3f4baa9cc426e15b499f62c445.setIcon(div_icon_a2c7af98fb97298cf3258a633211f55f);
+            
+    
+            var marker_f16b1d736a9835534cf61eaa1783415f = L.marker(
+                [45.5608386, -73.81754819999999],
+                {
+}
+            ).addTo(map_a255a69abd952dfb2f4e22fa30be35f4);
+        
+    
+            var div_icon_a13ee2c11ec9408f37ffd844c31fd0f9 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; color: white; background-color: #EE0E0E; padding: 3px 6px; border-radius: 3px; white-space: nowrap;\"\u003e\u003cb\u003eUltramar\u26fd\ufe0f\u003c/b\u003e\u003cbr\u003e178.9$\u003c/div\u003e",
+  "iconSize": [120, 40],
+  "iconAnchor": [50, -10],
+  "className": "empty",
+});
+        
+    
+        var popup_06077a62c022444d0432898f6bc0ea82 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d5e17b8b08a97244b4573f35710dbe31 = $(`<div id="html_d5e17b8b08a97244b4573f35710dbe31" style="width: 100.0%; height: 100.0%;"><b>Ultramar</b><br>Price: 178.9$<br>Location: 2900 Rue Étienne-Lenoir Laval<br>Latitude: 45.5608386<br>Longitude: -73.81754819999999</div>`)[0];
+                popup_06077a62c022444d0432898f6bc0ea82.setContent(html_d5e17b8b08a97244b4573f35710dbe31);
+            
+        
+
+        marker_f16b1d736a9835534cf61eaa1783415f.bindPopup(popup_06077a62c022444d0432898f6bc0ea82)
+        ;
+
+        
+    
+    
+            marker_f16b1d736a9835534cf61eaa1783415f.bindTooltip(
+                `<div>
+                     Ultramar - 178.9$
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f16b1d736a9835534cf61eaa1783415f.setIcon(div_icon_a13ee2c11ec9408f37ffd844c31fd0f9);
+            
+    
+            var marker_224cb4954e4dc5a6e3764b700b14bee6 = L.marker(
+                [45.5644944, -73.8187974],
+                {
+}
+            ).addTo(map_a255a69abd952dfb2f4e22fa30be35f4);
+        
+    
+            var div_icon_c8fcc710264df755c44c4d5419cd2c18 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; color: white; background-color: #EE0E0E; padding: 3px 6px; border-radius: 3px; white-space: nowrap;\"\u003e\u003cb\u003eEsso\u26fd\ufe0f\u003c/b\u003e\u003cbr\u003e178.9$\u003c/div\u003e",
+  "iconSize": [120, 40],
+  "iconAnchor": [50, -10],
+  "className": "empty",
+});
+        
+    
+        var popup_4e18a44106125fe94c926f21d33f6c3c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8db1d473c4e5cbd96c4f11ade2bff650 = $(`<div id="html_8db1d473c4e5cbd96c4f11ade2bff650" style="width: 100.0%; height: 100.0%;"><b>Esso</b><br>Price: 178.9$<br>Location: 4333 Autoroute Chomedey Laval<br>Latitude: 45.5644944<br>Longitude: -73.8187974</div>`)[0];
+                popup_4e18a44106125fe94c926f21d33f6c3c.setContent(html_8db1d473c4e5cbd96c4f11ade2bff650);
+            
+        
+
+        marker_224cb4954e4dc5a6e3764b700b14bee6.bindPopup(popup_4e18a44106125fe94c926f21d33f6c3c)
+        ;
+
+        
+    
+    
+            marker_224cb4954e4dc5a6e3764b700b14bee6.bindTooltip(
+                `<div>
+                     Esso - 178.9$
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_224cb4954e4dc5a6e3764b700b14bee6.setIcon(div_icon_c8fcc710264df755c44c4d5419cd2c18);
+            
+    
+            var marker_d280105bc304a20e6ccb1480edb97ecf = L.marker(
+                [45.59663159999999, -73.6870253],
+                {
+}
+            ).addTo(map_a255a69abd952dfb2f4e22fa30be35f4);
+        
+    
+            var div_icon_9926ea4cd52e3804bcc9fe2985dfb82b = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; color: white; background-color: #EE0E0E; padding: 3px 6px; border-radius: 3px; white-space: nowrap;\"\u003e\u003cb\u003eEsso\u26fd\ufe0f\u003c/b\u003e\u003cbr\u003e179.9$\u003c/div\u003e",
+  "iconSize": [120, 40],
+  "iconAnchor": [50, -10],
+  "className": "empty",
+});
+        
+    
+        var popup_76142a05821c41958e6fa1da0f08cd41 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_906601b7c649f7baede1339f698e0c57 = $(`<div id="html_906601b7c649f7baede1339f698e0c57" style="width: 100.0%; height: 100.0%;"><b>Esso</b><br>Price: 179.9$<br>Location: 2160 Boul Saint-Martin Est Laval<br>Latitude: 45.59663159999999<br>Longitude: -73.6870253</div>`)[0];
+                popup_76142a05821c41958e6fa1da0f08cd41.setContent(html_906601b7c649f7baede1339f698e0c57);
+            
+        
+
+        marker_d280105bc304a20e6ccb1480edb97ecf.bindPopup(popup_76142a05821c41958e6fa1da0f08cd41)
+        ;
+
+        
+    
+    
+            marker_d280105bc304a20e6ccb1480edb97ecf.bindTooltip(
+                `<div>
+                     Esso - 179.9$
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d280105bc304a20e6ccb1480edb97ecf.setIcon(div_icon_9926ea4cd52e3804bcc9fe2985dfb82b);
+            
+    
+            var marker_86f80ec64de355aacca575deae2c7f89 = L.marker(
+                [45.5107264, -73.8069194],
+                {
+}
+            ).addTo(map_a255a69abd952dfb2f4e22fa30be35f4);
+        
+    
+            var div_icon_cc8aa3813f92d0d7d3e458ec88bee012 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; color: white; background-color: #50D42F; padding: 3px 6px; border-radius: 3px; white-space: nowrap;\"\u003e\u003cb\u003eUltramar\u26fd\ufe0f\u003c/b\u003e\u003cbr\u003e162.9$\u003c/div\u003e",
+  "iconSize": [120, 40],
+  "iconAnchor": [50, -10],
+  "className": "empty",
+});
+        
+    
+        var popup_858f11e9dffe730fcaf54a5cce8f6c0a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c272741c590034264bfe632cb2669525 = $(`<div id="html_c272741c590034264bfe632cb2669525" style="width: 100.0%; height: 100.0%;"><b>Ultramar</b><br>Price: 162.9$<br>Location: 10422 Boul Gouin O Roxboro<br>Latitude: 45.5107264<br>Longitude: -73.8069194</div>`)[0];
+                popup_858f11e9dffe730fcaf54a5cce8f6c0a.setContent(html_c272741c590034264bfe632cb2669525);
+            
+        
+
+        marker_86f80ec64de355aacca575deae2c7f89.bindPopup(popup_858f11e9dffe730fcaf54a5cce8f6c0a)
+        ;
+
+        
+    
+    
+            marker_86f80ec64de355aacca575deae2c7f89.bindTooltip(
+                `<div>
+                     Ultramar - 162.9$
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_86f80ec64de355aacca575deae2c7f89.setIcon(div_icon_cc8aa3813f92d0d7d3e458ec88bee012);
+            
+    
+            var marker_f66638137c5ede6ad534efcf8397c23c = L.marker(
+                [45.6237158, -73.5583709],
+                {
+}
+            ).addTo(map_a255a69abd952dfb2f4e22fa30be35f4);
+        
+    
+            var div_icon_34360ed119b284b21c658e2ad6b36ea8 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; color: white; background-color: #50D42F; padding: 3px 6px; border-radius: 3px; white-space: nowrap;\"\u003e\u003cb\u003eCostco\u26fd\ufe0f\u003c/b\u003e\u003cbr\u003e164.9$\u003c/div\u003e",
+  "iconSize": [120, 40],
+  "iconAnchor": [50, -10],
+  "className": "empty",
+});
+        
+    
+        var popup_87d31f1ce335faf92639968b604e2d52 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_12fe3579695d1129684f534ed457c7b6 = $(`<div id="html_12fe3579695d1129684f534ed457c7b6" style="width: 100.0%; height: 100.0%;"><b>Costco</b><br>Price: 164.9$<br>Location: 9401 Boul des Sciences Anjou<br>Latitude: 45.6237158<br>Longitude: -73.5583709</div>`)[0];
+                popup_87d31f1ce335faf92639968b604e2d52.setContent(html_12fe3579695d1129684f534ed457c7b6);
+            
+        
+
+        marker_f66638137c5ede6ad534efcf8397c23c.bindPopup(popup_87d31f1ce335faf92639968b604e2d52)
+        ;
+
+        
+    
+    
+            marker_f66638137c5ede6ad534efcf8397c23c.bindTooltip(
+                `<div>
+                     Costco - 164.9$
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f66638137c5ede6ad534efcf8397c23c.setIcon(div_icon_34360ed119b284b21c658e2ad6b36ea8);
+            
+    
+            var marker_eeb8d7a612d042f573e75df7d36f6d29 = L.marker(
+                [45.460794, -73.7240312],
+                {
+}
+            ).addTo(map_a255a69abd952dfb2f4e22fa30be35f4);
+        
+    
+            var div_icon_661371fe2ab63eab4dc015338a00bb3f = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; color: white; background-color: #50D42F; padding: 3px 6px; border-radius: 3px; white-space: nowrap;\"\u003e\u003cb\u003eUltramar\u26fd\ufe0f\u003c/b\u003e\u003cbr\u003e164.9$\u003c/div\u003e",
+  "iconSize": [120, 40],
+  "iconAnchor": [50, -10],
+  "className": "empty",
+});
+        
+    
+        var popup_04ac4a0890ee80032e0628272d22ce0d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7b1718a35ec41c04a29e03c661ddd4d6 = $(`<div id="html_7b1718a35ec41c04a29e03c661ddd4d6" style="width: 100.0%; height: 100.0%;"><b>Ultramar</b><br>Price: 164.9$<br>Location: 11000 Chemin de la Côte-de-Liesse Lachine<br>Latitude: 45.460794<br>Longitude: -73.7240312</div>`)[0];
+                popup_04ac4a0890ee80032e0628272d22ce0d.setContent(html_7b1718a35ec41c04a29e03c661ddd4d6);
+            
+        
+
+        marker_eeb8d7a612d042f573e75df7d36f6d29.bindPopup(popup_04ac4a0890ee80032e0628272d22ce0d)
+        ;
+
+        
+    
+    
+            marker_eeb8d7a612d042f573e75df7d36f6d29.bindTooltip(
+                `<div>
+                     Ultramar - 164.9$
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_eeb8d7a612d042f573e75df7d36f6d29.setIcon(div_icon_661371fe2ab63eab4dc015338a00bb3f);
+            
+    
+            var marker_1f78e7fccfe83788f701fd3f0f7abee9 = L.marker(
+                [45.5266607, -73.6502429],
+                {
+}
+            ).addTo(map_a255a69abd952dfb2f4e22fa30be35f4);
+        
+    
+            var div_icon_b4a6bbc4a3d84fe2b0dac9ad1f5b3c97 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; color: white; background-color: #FF8C00; padding: 3px 6px; border-radius: 3px; white-space: nowrap;\"\u003e\u003cb\u003ePetro-Canada\u26fd\ufe0f\u003c/b\u003e\u003cbr\u003e165.9$\u003c/div\u003e",
+  "iconSize": [120, 40],
+  "iconAnchor": [50, -10],
+  "className": "empty",
+});
+        
+    
+        var popup_9f125538c3e3bd69a036516b4854a918 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_57a977cc90e1043944a49b985b9a6c9c = $(`<div id="html_57a977cc90e1043944a49b985b9a6c9c" style="width: 100.0%; height: 100.0%;"><b>Petro-Canada</b><br>Price: 165.9$<br>Location: 2460 Chemin Rockland Mont-Royal<br>Latitude: 45.5266607<br>Longitude: -73.6502429</div>`)[0];
+                popup_9f125538c3e3bd69a036516b4854a918.setContent(html_57a977cc90e1043944a49b985b9a6c9c);
+            
+        
+
+        marker_1f78e7fccfe83788f701fd3f0f7abee9.bindPopup(popup_9f125538c3e3bd69a036516b4854a918)
+        ;
+
+        
+    
+    
+            marker_1f78e7fccfe83788f701fd3f0f7abee9.bindTooltip(
+                `<div>
+                     Petro-Canada - 165.9$
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1f78e7fccfe83788f701fd3f0f7abee9.setIcon(div_icon_b4a6bbc4a3d84fe2b0dac9ad1f5b3c97);
+            
+    
+            var marker_9b7dde821a28021cece72d8e4616c8f4 = L.marker(
+                [45.5046937, -73.6774061],
+                {
+}
+            ).addTo(map_a255a69abd952dfb2f4e22fa30be35f4);
+        
+    
+            var div_icon_c7d1cd0d3c0d2b50b681cecf16cf12f4 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; color: white; background-color: #FF8C00; padding: 3px 6px; border-radius: 3px; white-space: nowrap;\"\u003e\u003cb\u003ePetro-Canada\u26fd\ufe0f\u003c/b\u003e\u003cbr\u003e165.9$\u003c/div\u003e",
+  "iconSize": [120, 40],
+  "iconAnchor": [50, -10],
+  "className": "empty",
+});
+        
+    
+        var popup_02ead5167cf12339cc58f45ff80bbacc = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_220d9284e480b141fe6d28177f2a9146 = $(`<div id="html_220d9284e480b141fe6d28177f2a9146" style="width: 100.0%; height: 100.0%;"><b>Petro-Canada</b><br>Price: 165.9$<br>Location: 415 Boulevard Marcel-Laurin Saint-Laurent<br>Latitude: 45.5046937<br>Longitude: -73.6774061</div>`)[0];
+                popup_02ead5167cf12339cc58f45ff80bbacc.setContent(html_220d9284e480b141fe6d28177f2a9146);
+            
+        
+
+        marker_9b7dde821a28021cece72d8e4616c8f4.bindPopup(popup_02ead5167cf12339cc58f45ff80bbacc)
+        ;
+
+        
+    
+    
+            marker_9b7dde821a28021cece72d8e4616c8f4.bindTooltip(
+                `<div>
+                     Petro-Canada - 165.9$
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9b7dde821a28021cece72d8e4616c8f4.setIcon(div_icon_c7d1cd0d3c0d2b50b681cecf16cf12f4);
+            
+    
+            var marker_6d0e3fecae75ef5daa7857e1e2da41b2 = L.marker(
+                [45.4865125, -73.5502199],
+                {
+}
+            ).addTo(map_a255a69abd952dfb2f4e22fa30be35f4);
+        
+    
+            var div_icon_3019076d185001fed0c4d4b3d4b11246 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; color: white; background-color: #FF8C00; padding: 3px 6px; border-radius: 3px; white-space: nowrap;\"\u003e\u003cb\u003eCostco\u26fd\ufe0f\u003c/b\u003e\u003cbr\u003e166.9$\u003c/div\u003e",
+  "iconSize": [120, 40],
+  "iconAnchor": [50, -10],
+  "className": "empty",
+});
+        
+    
+        var popup_1f681da5ccc927e77d301a8fcc8ee7ac = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9637016d043b5bacfaad2741b3f2d612 = $(`<div id="html_9637016d043b5bacfaad2741b3f2d612" style="width: 100.0%; height: 100.0%;"><b>Costco</b><br>Price: 166.9$<br>Location: 270 Bridge St Montreal<br>Latitude: 45.4865125<br>Longitude: -73.5502199</div>`)[0];
+                popup_1f681da5ccc927e77d301a8fcc8ee7ac.setContent(html_9637016d043b5bacfaad2741b3f2d612);
+            
+        
+
+        marker_6d0e3fecae75ef5daa7857e1e2da41b2.bindPopup(popup_1f681da5ccc927e77d301a8fcc8ee7ac)
+        ;
+
+        
+    
+    
+            marker_6d0e3fecae75ef5daa7857e1e2da41b2.bindTooltip(
+                `<div>
+                     Costco - 166.9$
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6d0e3fecae75ef5daa7857e1e2da41b2.setIcon(div_icon_3019076d185001fed0c4d4b3d4b11246);
+            
+    
+            var marker_df5b163011f5794c23d835048eca671e = L.marker(
+                [45.4900574, -73.6424655],
+                {
+}
+            ).addTo(map_a255a69abd952dfb2f4e22fa30be35f4);
+        
+    
+            var div_icon_dffb56c7b05133d572a5d423e2406e8a = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; color: white; background-color: #FF8C00; padding: 3px 6px; border-radius: 3px; white-space: nowrap;\"\u003e\u003cb\u003eShell\u26fd\ufe0f\u003c/b\u003e\u003cbr\u003e167.9$\u003c/div\u003e",
+  "iconSize": [120, 40],
+  "iconAnchor": [50, -10],
+  "className": "empty",
+});
+        
+    
+        var popup_31d322aa3d21025daca454dc7b94682a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9c9a23e219ae779675dc9cf46f7ba8c1 = $(`<div id="html_9c9a23e219ae779675dc9cf46f7ba8c1" style="width: 100.0%; height: 100.0%;"><b>Shell</b><br>Price: 167.9$<br>Location: 6201 Boulevard Décarie Montréal<br>Latitude: 45.4900574<br>Longitude: -73.6424655</div>`)[0];
+                popup_31d322aa3d21025daca454dc7b94682a.setContent(html_9c9a23e219ae779675dc9cf46f7ba8c1);
+            
+        
+
+        marker_df5b163011f5794c23d835048eca671e.bindPopup(popup_31d322aa3d21025daca454dc7b94682a)
+        ;
+
+        
+    
+    
+            marker_df5b163011f5794c23d835048eca671e.bindTooltip(
+                `<div>
+                     Shell - 167.9$
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_df5b163011f5794c23d835048eca671e.setIcon(div_icon_dffb56c7b05133d572a5d423e2406e8a);
+            
+    
+            var marker_71c27983cf9a42f045f87182a094ab6e = L.marker(
+                [45.491827, -73.8525502],
+                {
+}
+            ).addTo(map_a255a69abd952dfb2f4e22fa30be35f4);
+        
+    
+            var div_icon_767194dde846898dd242631bb99ab52e = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; color: white; background-color: #FF8C00; padding: 3px 6px; border-radius: 3px; white-space: nowrap;\"\u003e\u003cb\u003eSuper Gaz\u26fd\ufe0f\u003c/b\u003e\u003cbr\u003e167.9$\u003c/div\u003e",
+  "iconSize": [120, 40],
+  "iconAnchor": [50, -10],
+  "className": "empty",
+});
+        
+    
+        var popup_cd132bdbb5f843f0121584f9b40587bc = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b7595ee398e473bfa82eb668c5a2960a = $(`<div id="html_b7595ee398e473bfa82eb668c5a2960a" style="width: 100.0%; height: 100.0%;"><b>Super Gaz</b><br>Price: 167.9$<br>Location: 14305 Boul de Pierrefonds Pierrefonds<br>Latitude: 45.491827<br>Longitude: -73.8525502</div>`)[0];
+                popup_cd132bdbb5f843f0121584f9b40587bc.setContent(html_b7595ee398e473bfa82eb668c5a2960a);
+            
+        
+
+        marker_71c27983cf9a42f045f87182a094ab6e.bindPopup(popup_cd132bdbb5f843f0121584f9b40587bc)
+        ;
+
+        
+    
+    
+            marker_71c27983cf9a42f045f87182a094ab6e.bindTooltip(
+                `<div>
+                     Super Gaz - 167.9$
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_71c27983cf9a42f045f87182a094ab6e.setIcon(div_icon_767194dde846898dd242631bb99ab52e);
+            
+    
+            var marker_d594260aca1ed6fe2f72cab351c62abd = L.marker(
+                [45.4847719, -73.6329511],
+                {
+}
+            ).addTo(map_a255a69abd952dfb2f4e22fa30be35f4);
+        
+    
+            var div_icon_ce4bce3363a2a992482d1a372067c729 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; color: white; background-color: #FF8C00; padding: 3px 6px; border-radius: 3px; white-space: nowrap;\"\u003e\u003cb\u003eShell\u26fd\ufe0f\u003c/b\u003e\u003cbr\u003e168.9$\u003c/div\u003e",
+  "iconSize": [120, 40],
+  "iconAnchor": [50, -10],
+  "className": "empty",
+});
+        
+    
+        var popup_6e0a2d16baf973e90fc3c3f58897ddf2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_906559df2f176d9f4e2ff78817d75fb2 = $(`<div id="html_906559df2f176d9f4e2ff78817d75fb2" style="width: 100.0%; height: 100.0%;"><b>Shell</b><br>Price: 168.9$<br>Location: 5330 Boul. Décarie Montréal<br>Latitude: 45.4847719<br>Longitude: -73.6329511</div>`)[0];
+                popup_6e0a2d16baf973e90fc3c3f58897ddf2.setContent(html_906559df2f176d9f4e2ff78817d75fb2);
+            
+        
+
+        marker_d594260aca1ed6fe2f72cab351c62abd.bindPopup(popup_6e0a2d16baf973e90fc3c3f58897ddf2)
+        ;
+
+        
+    
+    
+            marker_d594260aca1ed6fe2f72cab351c62abd.bindTooltip(
+                `<div>
+                     Shell - 168.9$
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d594260aca1ed6fe2f72cab351c62abd.setIcon(div_icon_ce4bce3363a2a992482d1a372067c729);
+            
+    
+            var marker_6e3bd2a04b1c912d6e56bd4fec1911cd = L.marker(
+                [45.49615379999999, -73.6549027],
+                {
+}
+            ).addTo(map_a255a69abd952dfb2f4e22fa30be35f4);
+        
+    
+            var div_icon_aace2fa5773f9af9b8cea075ff585a19 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; color: white; background-color: #FF8C00; padding: 3px 6px; border-radius: 3px; white-space: nowrap;\"\u003e\u003cb\u003eShell\u26fd\ufe0f\u003c/b\u003e\u003cbr\u003e168.9$\u003c/div\u003e",
+  "iconSize": [120, 40],
+  "iconAnchor": [50, -10],
+  "className": "empty",
+});
+        
+    
+        var popup_d9910ce5a8d6a73b1b6393755dae9aac = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a12e2b65b5b6b1553773f4deb072e390 = $(`<div id="html_a12e2b65b5b6b1553773f4deb072e390" style="width: 100.0%; height: 100.0%;"><b>Shell</b><br>Price: 168.9$<br>Location: 7575 boulevard décarie Montréal<br>Latitude: 45.49615379999999<br>Longitude: -73.6549027</div>`)[0];
+                popup_d9910ce5a8d6a73b1b6393755dae9aac.setContent(html_a12e2b65b5b6b1553773f4deb072e390);
+            
+        
+
+        marker_6e3bd2a04b1c912d6e56bd4fec1911cd.bindPopup(popup_d9910ce5a8d6a73b1b6393755dae9aac)
+        ;
+
+        
+    
+    
+            marker_6e3bd2a04b1c912d6e56bd4fec1911cd.bindTooltip(
+                `<div>
+                     Shell - 168.9$
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6e3bd2a04b1c912d6e56bd4fec1911cd.setIcon(div_icon_aace2fa5773f9af9b8cea075ff585a19);
+            
+    
+            var marker_7a8403796797fa620863a3b3e7e9d874 = L.marker(
+                [45.49504140000001, -73.6560777],
+                {
+}
+            ).addTo(map_a255a69abd952dfb2f4e22fa30be35f4);
+        
+    
+            var div_icon_677d78315c06fb7c7751c1b6343add3f = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; color: white; background-color: #FF8C00; padding: 3px 6px; border-radius: 3px; white-space: nowrap;\"\u003e\u003cb\u003ePetro-Canada\u26fd\ufe0f\u003c/b\u003e\u003cbr\u003e168.9$\u003c/div\u003e",
+  "iconSize": [120, 40],
+  "iconAnchor": [50, -10],
+  "className": "empty",
+});
+        
+    
+        var popup_dc07d57d02b89b501070bebd49c3087a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_76f98b0dba13f70f35e1c4d1dc8c0fcf = $(`<div id="html_76f98b0dba13f70f35e1c4d1dc8c0fcf" style="width: 100.0%; height: 100.0%;"><b>Petro-Canada</b><br>Price: 168.9$<br>Location: 7560 Boul. Decarie Montreal<br>Latitude: 45.49504140000001<br>Longitude: -73.6560777</div>`)[0];
+                popup_dc07d57d02b89b501070bebd49c3087a.setContent(html_76f98b0dba13f70f35e1c4d1dc8c0fcf);
+            
+        
+
+        marker_7a8403796797fa620863a3b3e7e9d874.bindPopup(popup_dc07d57d02b89b501070bebd49c3087a)
+        ;
+
+        
+    
+    
+            marker_7a8403796797fa620863a3b3e7e9d874.bindTooltip(
+                `<div>
+                     Petro-Canada - 168.9$
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_7a8403796797fa620863a3b3e7e9d874.setIcon(div_icon_677d78315c06fb7c7751c1b6343add3f);
+            
+    
+            var marker_699544f5ab6f4e9442fba9cc214e7ed5 = L.marker(
+                [45.5380119, -73.69881629999999],
+                {
+}
+            ).addTo(map_a255a69abd952dfb2f4e22fa30be35f4);
+        
+    
+            var div_icon_60311569f45274b08dedb44704c2a53f = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; color: white; background-color: #FF8C00; padding: 3px 6px; border-radius: 3px; white-space: nowrap;\"\u003e\u003cb\u003ePetro-Canada\u26fd\ufe0f\u003c/b\u003e\u003cbr\u003e168.9$\u003c/div\u003e",
+  "iconSize": [120, 40],
+  "iconAnchor": [50, -10],
+  "className": "empty",
+});
+        
+    
+        var popup_c90db70a1d2128562ed18a14feaa8028 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_23d4b9528e90398bfabc998627ea4f93 = $(`<div id="html_23d4b9528e90398bfabc998627ea4f93" style="width: 100.0%; height: 100.0%;"><b>Petro-Canada</b><br>Price: 168.9$<br>Location: 2510 Rue de Salaberry Montréal<br>Latitude: 45.5380119<br>Longitude: -73.69881629999999</div>`)[0];
+                popup_c90db70a1d2128562ed18a14feaa8028.setContent(html_23d4b9528e90398bfabc998627ea4f93);
+            
+        
+
+        marker_699544f5ab6f4e9442fba9cc214e7ed5.bindPopup(popup_c90db70a1d2128562ed18a14feaa8028)
+        ;
+
+        
+    
+    
+            marker_699544f5ab6f4e9442fba9cc214e7ed5.bindTooltip(
+                `<div>
+                     Petro-Canada - 168.9$
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_699544f5ab6f4e9442fba9cc214e7ed5.setIcon(div_icon_60311569f45274b08dedb44704c2a53f);
+            
+    
+            var marker_7c0f58f4a499dff44b59854eb245c88d = L.marker(
+                [45.6524146, -73.5371507],
+                {
+}
+            ).addTo(map_a255a69abd952dfb2f4e22fa30be35f4);
+        
+    
+            var div_icon_1becff6d6b7b16caba5f0cf38e011b8a = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; color: white; background-color: #FF8C00; padding: 3px 6px; border-radius: 3px; white-space: nowrap;\"\u003e\u003cb\u003eCouche-Tard\u26fd\ufe0f\u003c/b\u003e\u003cbr\u003e168.9$\u003c/div\u003e",
+  "iconSize": [120, 40],
+  "iconAnchor": [50, -10],
+  "className": "empty",
+});
+        
+    
+        var popup_6d8a0c11075f8b390cd780fa30c275bc = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3e7a7b87a69269859e1809e497440014 = $(`<div id="html_3e7a7b87a69269859e1809e497440014" style="width: 100.0%; height: 100.0%;"><b>Couche-Tard</b><br>Price: 168.9$<br>Location: 10725 Boul Henri-Bourassa E Montréal<br>Latitude: 45.6524146<br>Longitude: -73.5371507</div>`)[0];
+                popup_6d8a0c11075f8b390cd780fa30c275bc.setContent(html_3e7a7b87a69269859e1809e497440014);
+            
+        
+
+        marker_7c0f58f4a499dff44b59854eb245c88d.bindPopup(popup_6d8a0c11075f8b390cd780fa30c275bc)
+        ;
+
+        
+    
+    
+            marker_7c0f58f4a499dff44b59854eb245c88d.bindTooltip(
+                `<div>
+                     Couche-Tard - 168.9$
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_7c0f58f4a499dff44b59854eb245c88d.setIcon(div_icon_1becff6d6b7b16caba5f0cf38e011b8a);
+            
+    
+            var marker_3992287036c57739a9d6eca8ff0c97ea = L.marker(
+                [45.5281506, -73.668962],
+                {
+}
+            ).addTo(map_a255a69abd952dfb2f4e22fa30be35f4);
+        
+    
+            var div_icon_7dac7b8aeea77b4cd6c9939467dec3e8 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; color: white; background-color: #FF8C00; padding: 3px 6px; border-radius: 3px; white-space: nowrap;\"\u003e\u003cb\u003eUltramar\u26fd\ufe0f\u003c/b\u003e\u003cbr\u003e168.9$\u003c/div\u003e",
+  "iconSize": [120, 40],
+  "iconAnchor": [50, -10],
+  "className": "empty",
+});
+        
+    
+        var popup_6cd553ffe10bbd118333e8bc4f1b14ca = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1ec2fa7721bebc1f7da8e86616734390 = $(`<div id="html_1ec2fa7721bebc1f7da8e86616734390" style="width: 100.0%; height: 100.0%;"><b>Ultramar</b><br>Price: 168.9$<br>Location: 200 Boulevard de la Côte-Vertu Montréal<br>Latitude: 45.5281506<br>Longitude: -73.668962</div>`)[0];
+                popup_6cd553ffe10bbd118333e8bc4f1b14ca.setContent(html_1ec2fa7721bebc1f7da8e86616734390);
+            
+        
+
+        marker_3992287036c57739a9d6eca8ff0c97ea.bindPopup(popup_6cd553ffe10bbd118333e8bc4f1b14ca)
+        ;
+
+        
+    
+    
+            marker_3992287036c57739a9d6eca8ff0c97ea.bindTooltip(
+                `<div>
+                     Ultramar - 168.9$
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3992287036c57739a9d6eca8ff0c97ea.setIcon(div_icon_7dac7b8aeea77b4cd6c9939467dec3e8);
+            
+    
+            var marker_d88227a417bfce66ca4feb4ef0b52739 = L.marker(
+                [45.49307, -73.70849079999999],
+                {
+}
+            ).addTo(map_a255a69abd952dfb2f4e22fa30be35f4);
+        
+    
+            var div_icon_3a041e72bd0fec153d43dd0cb80cfb2f = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; color: white; background-color: #FF8C00; padding: 3px 6px; border-radius: 3px; white-space: nowrap;\"\u003e\u003cb\u003ePetro-Canada\u26fd\ufe0f\u003c/b\u003e\u003cbr\u003e168.9$\u003c/div\u003e",
+  "iconSize": [120, 40],
+  "iconAnchor": [50, -10],
+  "className": "empty",
+});
+        
+    
+        var popup_7c1c008c9f3216dfc6ddc9a6fd23e9a5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4bae2ce3679147025af7d04ccd86f33b = $(`<div id="html_4bae2ce3679147025af7d04ccd86f33b" style="width: 100.0%; height: 100.0%;"><b>Petro-Canada</b><br>Price: 168.9$<br>Location: 3700 Boulevard de la Côte-Vertu Saint-Laurent<br>Latitude: 45.49307<br>Longitude: -73.70849079999999</div>`)[0];
+                popup_7c1c008c9f3216dfc6ddc9a6fd23e9a5.setContent(html_4bae2ce3679147025af7d04ccd86f33b);
+            
+        
+
+        marker_d88227a417bfce66ca4feb4ef0b52739.bindPopup(popup_7c1c008c9f3216dfc6ddc9a6fd23e9a5)
+        ;
+
+        
+    
+    
+            marker_d88227a417bfce66ca4feb4ef0b52739.bindTooltip(
+                `<div>
+                     Petro-Canada - 168.9$
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d88227a417bfce66ca4feb4ef0b52739.setIcon(div_icon_3a041e72bd0fec153d43dd0cb80cfb2f);
+            
+    
+            var marker_a400f67be8ef1c6337737d1100af04bf = L.marker(
+                [45.4905366, -73.802803],
+                {
+}
+            ).addTo(map_a255a69abd952dfb2f4e22fa30be35f4);
+        
+    
+            var div_icon_ee86fcde0890ddd5c47156202ecbc70f = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; color: white; background-color: #FF8C00; padding: 3px 6px; border-radius: 3px; white-space: nowrap;\"\u003e\u003cb\u003eShell\u26fd\ufe0f\u003c/b\u003e\u003cbr\u003e169.9$\u003c/div\u003e",
+  "iconSize": [120, 40],
+  "iconAnchor": [50, -10],
+  "className": "empty",
+});
+        
+    
+        var popup_6497b738b280dbb1e2ba2ad320fb7fd8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_085977c2af5e300093444c4d25d06a38 = $(`<div id="html_085977c2af5e300093444c4d25d06a38" style="width: 100.0%; height: 100.0%;"><b>Shell</b><br>Price: 169.9$<br>Location: 3865 Boulevard des Sources Dollard-des-Ormeaux<br>Latitude: 45.4905366<br>Longitude: -73.802803</div>`)[0];
+                popup_6497b738b280dbb1e2ba2ad320fb7fd8.setContent(html_085977c2af5e300093444c4d25d06a38);
+            
+        
+
+        marker_a400f67be8ef1c6337737d1100af04bf.bindPopup(popup_6497b738b280dbb1e2ba2ad320fb7fd8)
+        ;
+
+        
+    
+    
+            marker_a400f67be8ef1c6337737d1100af04bf.bindTooltip(
+                `<div>
+                     Shell - 169.9$
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a400f67be8ef1c6337737d1100af04bf.setIcon(div_icon_ee86fcde0890ddd5c47156202ecbc70f);
+            
+    
+            var marker_998829670ea66a1f0faf0efcacc1508c = L.marker(
+                [45.4351957, -73.678777],
+                {
+}
+            ).addTo(map_a255a69abd952dfb2f4e22fa30be35f4);
+        
+    
+            var div_icon_525ad9fd0accce1c0aa69110f1eee587 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; color: white; background-color: #FF8C00; padding: 3px 6px; border-radius: 3px; white-space: nowrap;\"\u003e\u003cb\u003eUltramar\u26fd\ufe0f\u003c/b\u003e\u003cbr\u003e169.9$\u003c/div\u003e",
+  "iconSize": [120, 40],
+  "iconAnchor": [50, -10],
+  "className": "empty",
+});
+        
+    
+        var popup_10a9bf6c244f136dad2a3255badd31cb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d3364f4cbc2faf90a11a22665235061e = $(`<div id="html_d3364f4cbc2faf90a11a22665235061e" style="width: 100.0%; height: 100.0%;"><b>Ultramar</b><br>Price: 169.9$<br>Location: 1650 Rue Notre Dame Lachine<br>Latitude: 45.4351957<br>Longitude: -73.678777</div>`)[0];
+                popup_10a9bf6c244f136dad2a3255badd31cb.setContent(html_d3364f4cbc2faf90a11a22665235061e);
+            
+        
+
+        marker_998829670ea66a1f0faf0efcacc1508c.bindPopup(popup_10a9bf6c244f136dad2a3255badd31cb)
+        ;
+
+        
+    
+    
+            marker_998829670ea66a1f0faf0efcacc1508c.bindTooltip(
+                `<div>
+                     Ultramar - 169.9$
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_998829670ea66a1f0faf0efcacc1508c.setIcon(div_icon_525ad9fd0accce1c0aa69110f1eee587);
+            
+    
+            var marker_25806104fd66c3b0445b4a034eaa7436 = L.marker(
+                [45.5273136, -73.6500171],
+                {
+}
+            ).addTo(map_a255a69abd952dfb2f4e22fa30be35f4);
+        
+    
+            var div_icon_036db2d2f5f70f192432aadb7a9ec2d7 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; color: white; background-color: #FF8C00; padding: 3px 6px; border-radius: 3px; white-space: nowrap;\"\u003e\u003cb\u003eEsso\u26fd\ufe0f\u003c/b\u003e\u003cbr\u003e170.9$\u003c/div\u003e",
+  "iconSize": [120, 40],
+  "iconAnchor": [50, -10],
+  "className": "empty",
+});
+        
+    
+        var popup_777d7c43f80ef07f9c4d6d1715049f40 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f31fd92632f3d4ca84d2b440c04524a9 = $(`<div id="html_f31fd92632f3d4ca84d2b440c04524a9" style="width: 100.0%; height: 100.0%;"><b>Esso</b><br>Price: 170.9$<br>Location: 2495 Chemin Rockland Mont-Royal<br>Latitude: 45.5273136<br>Longitude: -73.6500171</div>`)[0];
+                popup_777d7c43f80ef07f9c4d6d1715049f40.setContent(html_f31fd92632f3d4ca84d2b440c04524a9);
+            
+        
+
+        marker_25806104fd66c3b0445b4a034eaa7436.bindPopup(popup_777d7c43f80ef07f9c4d6d1715049f40)
+        ;
+
+        
+    
+    
+            marker_25806104fd66c3b0445b4a034eaa7436.bindTooltip(
+                `<div>
+                     Esso - 170.9$
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_25806104fd66c3b0445b4a034eaa7436.setIcon(div_icon_036db2d2f5f70f192432aadb7a9ec2d7);
+            
+    
+            var marker_b3a51e649cd41112fe5dea125e77b95b = L.marker(
+                [45.4797664, -73.6020274],
+                {
+}
+            ).addTo(map_a255a69abd952dfb2f4e22fa30be35f4);
+        
+    
+            var div_icon_c4f05d3eefd403b7d32452978866e274 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; color: white; background-color: #FF8C00; padding: 3px 6px; border-radius: 3px; white-space: nowrap;\"\u003e\u003cb\u003eEsso\u26fd\ufe0f\u003c/b\u003e\u003cbr\u003e170.9$\u003c/div\u003e",
+  "iconSize": [120, 40],
+  "iconAnchor": [50, -10],
+  "className": "empty",
+});
+        
+    
+        var popup_3274c5debfc6f9e968c2992a104fd8b9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fbe26ede3517b7995e15569489a70014 = $(`<div id="html_fbe26ede3517b7995e15569489a70014" style="width: 100.0%; height: 100.0%;"><b>Esso</b><br>Price: 170.9$<br>Location: 4780 Rue Sherbrooke O Westmount<br>Latitude: 45.4797664<br>Longitude: -73.6020274</div>`)[0];
+                popup_3274c5debfc6f9e968c2992a104fd8b9.setContent(html_fbe26ede3517b7995e15569489a70014);
+            
+        
+
+        marker_b3a51e649cd41112fe5dea125e77b95b.bindPopup(popup_3274c5debfc6f9e968c2992a104fd8b9)
+        ;
+
+        
+    
+    
+            marker_b3a51e649cd41112fe5dea125e77b95b.bindTooltip(
+                `<div>
+                     Esso - 170.9$
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b3a51e649cd41112fe5dea125e77b95b.setIcon(div_icon_c4f05d3eefd403b7d32452978866e274);
+            
+    
+            var marker_e5e75066adf6a99f90d2f2e9753979a3 = L.marker(
+                [45.4328624, -73.64657249999999],
+                {
+}
+            ).addTo(map_a255a69abd952dfb2f4e22fa30be35f4);
+        
+    
+            var div_icon_b060071a5a6ac8b8dc30910b38a1192c = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; color: white; background-color: #FF8C00; padding: 3px 6px; border-radius: 3px; white-space: nowrap;\"\u003e\u003cb\u003eShell\u26fd\ufe0f\u003c/b\u003e\u003cbr\u003e170.9$\u003c/div\u003e",
+  "iconSize": [120, 40],
+  "iconAnchor": [50, -10],
+  "className": "empty",
+});
+        
+    
+        var popup_f161c55fdef9a970e48bda2499c9b52a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_997fe349e3fa7bf6fb5ba9616dc72452 = $(`<div id="html_997fe349e3fa7bf6fb5ba9616dc72452" style="width: 100.0%; height: 100.0%;"><b>Shell</b><br>Price: 170.9$<br>Location: 444 Avenue Lafleur Montréal<br>Latitude: 45.4328624<br>Longitude: -73.64657249999999</div>`)[0];
+                popup_f161c55fdef9a970e48bda2499c9b52a.setContent(html_997fe349e3fa7bf6fb5ba9616dc72452);
+            
+        
+
+        marker_e5e75066adf6a99f90d2f2e9753979a3.bindPopup(popup_f161c55fdef9a970e48bda2499c9b52a)
+        ;
+
+        
+    
+    
+            marker_e5e75066adf6a99f90d2f2e9753979a3.bindTooltip(
+                `<div>
+                     Shell - 170.9$
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e5e75066adf6a99f90d2f2e9753979a3.setIcon(div_icon_b060071a5a6ac8b8dc30910b38a1192c);
+            
+    
+            var marker_7322ff9ec0d3eba0ec534c2782294527 = L.marker(
+                [45.6277138, -73.5957092],
+                {
+}
+            ).addTo(map_a255a69abd952dfb2f4e22fa30be35f4);
+        
+    
+            var div_icon_45b57a64d2a36b77f07d4862eb2e6100 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; color: white; background-color: #FF8C00; padding: 3px 6px; border-radius: 3px; white-space: nowrap;\"\u003e\u003cb\u003ePetro-Canada\u26fd\ufe0f\u003c/b\u003e\u003cbr\u003e170.9$\u003c/div\u003e",
+  "iconSize": [120, 40],
+  "iconAnchor": [50, -10],
+  "className": "empty",
+});
+        
+    
+        var popup_cff7ad19b6e6315d87beaedf2e2abcbb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_41134febddcd2fc9aa779ac8cbf7897c = $(`<div id="html_41134febddcd2fc9aa779ac8cbf7897c" style="width: 100.0%; height: 100.0%;"><b>Petro-Canada</b><br>Price: 170.9$<br>Location: 7667 Boulevard Maurice-Duplessis Montréal<br>Latitude: 45.6277138<br>Longitude: -73.5957092</div>`)[0];
+                popup_cff7ad19b6e6315d87beaedf2e2abcbb.setContent(html_41134febddcd2fc9aa779ac8cbf7897c);
+            
+        
+
+        marker_7322ff9ec0d3eba0ec534c2782294527.bindPopup(popup_cff7ad19b6e6315d87beaedf2e2abcbb)
+        ;
+
+        
+    
+    
+            marker_7322ff9ec0d3eba0ec534c2782294527.bindTooltip(
+                `<div>
+                     Petro-Canada - 170.9$
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_7322ff9ec0d3eba0ec534c2782294527.setIcon(div_icon_45b57a64d2a36b77f07d4862eb2e6100);
+            
+    
+            var marker_3bfbc83024eec6de9e4d202c331c2949 = L.marker(
+                [45.5232923, -73.5546004],
+                {
+}
+            ).addTo(map_a255a69abd952dfb2f4e22fa30be35f4);
+        
+    
+            var div_icon_f832b49c0cd49ccfc6d38edaea3dcd2b = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; color: white; background-color: #FF8C00; padding: 3px 6px; border-radius: 3px; white-space: nowrap;\"\u003e\u003cb\u003eUltramar\u26fd\ufe0f\u003c/b\u003e\u003cbr\u003e170.9$\u003c/div\u003e",
+  "iconSize": [120, 40],
+  "iconAnchor": [50, -10],
+  "className": "empty",
+});
+        
+    
+        var popup_a90c1e83524b11ffa441295ba218cc41 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e2106e1f84dbc3700ae06568b915800d = $(`<div id="html_e2106e1f84dbc3700ae06568b915800d" style="width: 100.0%; height: 100.0%;"><b>Ultramar</b><br>Price: 170.9$<br>Location: 1550 Avenue Papineau Montréal<br>Latitude: 45.5232923<br>Longitude: -73.5546004</div>`)[0];
+                popup_a90c1e83524b11ffa441295ba218cc41.setContent(html_e2106e1f84dbc3700ae06568b915800d);
+            
+        
+
+        marker_3bfbc83024eec6de9e4d202c331c2949.bindPopup(popup_a90c1e83524b11ffa441295ba218cc41)
+        ;
+
+        
+    
+    
+            marker_3bfbc83024eec6de9e4d202c331c2949.bindTooltip(
+                `<div>
+                     Ultramar - 170.9$
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3bfbc83024eec6de9e4d202c331c2949.setIcon(div_icon_f832b49c0cd49ccfc6d38edaea3dcd2b);
+            
+    
+            var marker_5985c8a3fa9751bcc7430b5d49678172 = L.marker(
+                [45.4828289, -73.7889972],
+                {
+}
+            ).addTo(map_a255a69abd952dfb2f4e22fa30be35f4);
+        
+    
+            var div_icon_d0d8bf726c991aa011e158de6ac684cc = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; color: white; background-color: #FF8C00; padding: 3px 6px; border-radius: 3px; white-space: nowrap;\"\u003e\u003cb\u003ePetro-Canada\u26fd\ufe0f\u003c/b\u003e\u003cbr\u003e172.9$\u003c/div\u003e",
+  "iconSize": [120, 40],
+  "iconAnchor": [50, -10],
+  "className": "empty",
+});
+        
+    
+        var popup_150098682122206611002b3f50499da7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c1bcac2f7ae2dac86aa18b6050be3e73 = $(`<div id="html_c1bcac2f7ae2dac86aa18b6050be3e73" style="width: 100.0%; height: 100.0%;"><b>Petro-Canada</b><br>Price: 172.9$<br>Location: 2201 Voie de Service Nord Dorval<br>Latitude: 45.4828289<br>Longitude: -73.7889972</div>`)[0];
+                popup_150098682122206611002b3f50499da7.setContent(html_c1bcac2f7ae2dac86aa18b6050be3e73);
+            
+        
+
+        marker_5985c8a3fa9751bcc7430b5d49678172.bindPopup(popup_150098682122206611002b3f50499da7)
+        ;
+
+        
+    
+    
+            marker_5985c8a3fa9751bcc7430b5d49678172.bindTooltip(
+                `<div>
+                     Petro-Canada - 172.9$
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_5985c8a3fa9751bcc7430b5d49678172.setIcon(div_icon_d0d8bf726c991aa011e158de6ac684cc);
+            
+    
+            var marker_4609ebca1e0264749a465d146c50f03b = L.marker(
+                [45.4627257, -73.8703457],
+                {
+}
+            ).addTo(map_a255a69abd952dfb2f4e22fa30be35f4);
+        
+    
+            var div_icon_6e4d6a21de395edc6a352084d2477655 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; color: white; background-color: #FF8C00; padding: 3px 6px; border-radius: 3px; white-space: nowrap;\"\u003e\u003cb\u003eShell\u26fd\ufe0f\u003c/b\u003e\u003cbr\u003e172.9$\u003c/div\u003e",
+  "iconSize": [120, 40],
+  "iconAnchor": [50, -10],
+  "className": "empty",
+});
+        
+    
+        var popup_169331b31ec6fb5ee94e1afe70627aa9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_971ca7ddc347500bc0921a80d0c6353e = $(`<div id="html_971ca7ddc347500bc0921a80d0c6353e" style="width: 100.0%; height: 100.0%;"><b>Shell</b><br>Price: 172.9$<br>Location: 4510 Boulevard Saint-Charles Pierrefonds<br>Latitude: 45.4627257<br>Longitude: -73.8703457</div>`)[0];
+                popup_169331b31ec6fb5ee94e1afe70627aa9.setContent(html_971ca7ddc347500bc0921a80d0c6353e);
+            
+        
+
+        marker_4609ebca1e0264749a465d146c50f03b.bindPopup(popup_169331b31ec6fb5ee94e1afe70627aa9)
+        ;
+
+        
+    
+    
+            marker_4609ebca1e0264749a465d146c50f03b.bindTooltip(
+                `<div>
+                     Shell - 172.9$
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4609ebca1e0264749a465d146c50f03b.setIcon(div_icon_6e4d6a21de395edc6a352084d2477655);
+            
+</script>
+</html>
